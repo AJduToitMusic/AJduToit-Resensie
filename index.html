@@ -1,0 +1,1923 @@
+<!DOCTYPE html>
+<html lang="af">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AJ du Toit — Volledige Letterkundige Resensie</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&family=JetBrains+Mono:wght@300;400&display=swap');
+
+  :root {
+    --ink:       #1a1410;
+    --sepia:     #3d2b1f;
+    --earth:     #8b5e3c;
+    --veldt:     #c4902a;
+    --gold:      #e8c56a;
+    --dust:      #f2e8d5;
+    --paper:     #faf6ef;
+    --mist:      #f7f3ec;
+    --rule:      #d4c4a8;
+    --red-earth: #9b3a2a;
+    --sky:       #4a6fa5;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 17px;
+    line-height: 1.75;
+  }
+
+  /* ── MASTHEAD ── */
+  .masthead {
+    background: var(--ink);
+    color: var(--dust);
+    padding: 3.5rem 2rem 3rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .masthead::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: repeating-linear-gradient(
+      135deg,
+      transparent,
+      transparent 40px,
+      rgba(196,144,42,0.04) 40px,
+      rgba(196,144,42,0.04) 41px
+    );
+    pointer-events: none;
+  }
+  .masthead-eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1.2rem;
+  }
+  .masthead h1 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(2.4rem, 6vw, 4.5rem);
+    font-weight: 900;
+    line-height: 1.1;
+    color: var(--dust);
+    margin-bottom: 0.6rem;
+  }
+  .masthead h1 em {
+    font-style: italic;
+    color: var(--gold);
+  }
+  .masthead-sub {
+    font-family: 'Source Serif 4', serif;
+    font-style: italic;
+    font-size: 1.15rem;
+    color: var(--rule);
+    margin-bottom: 2rem;
+  }
+  .masthead-meta {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.68rem;
+    letter-spacing: 0.15em;
+    color: #6b5a48;
+    text-transform: uppercase;
+  }
+  .gold-rule {
+    width: 60px;
+    height: 2px;
+    background: var(--veldt);
+    margin: 1.5rem auto;
+  }
+
+  /* ── NAV ── */
+  .toc-wrapper {
+    background: var(--sepia);
+    color: var(--dust);
+    padding: 2.5rem 2rem;
+  }
+  .toc-wrapper h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    letter-spacing: 0.08em;
+    color: var(--gold);
+    margin-bottom: 1.2rem;
+    font-weight: 700;
+  }
+  .toc-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 0.3rem 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .toc-grid a {
+    color: var(--rule);
+    text-decoration: none;
+    font-size: 0.82rem;
+    font-family: 'Source Serif 4', serif;
+    padding: 0.25rem 0;
+    border-bottom: 1px solid rgba(212,196,168,0.15);
+    display: flex; align-items: baseline; gap: 0.5rem;
+    transition: color 0.2s;
+  }
+  .toc-grid a:hover { color: var(--gold); }
+  .toc-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    color: var(--earth);
+    min-width: 1.8rem;
+    flex-shrink: 0;
+  }
+
+  /* ── PAGE LAYOUT ── */
+  .page {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  /* ── SECTION HEADERS ── */
+  .section-banner {
+    background: var(--sepia);
+    color: var(--dust);
+    padding: 2.5rem 2rem;
+    margin: 0 -2rem;
+    position: relative;
+  }
+  .section-banner .eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.5rem;
+  }
+  .section-banner h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.6rem, 4vw, 2.4rem);
+    font-weight: 900;
+    line-height: 1.2;
+    color: var(--dust);
+  }
+  .section-banner h2 em { color: var(--gold); font-style: italic; }
+
+  /* ── BROAD REVIEW ── */
+  .broad-review {
+    padding: 3.5rem 0;
+    border-bottom: 1px solid var(--rule);
+  }
+  .broad-review p {
+    margin-bottom: 1.4rem;
+    color: var(--sepia);
+  }
+  .broad-review h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--ink);
+    margin: 2.5rem 0 0.8rem;
+    padding-bottom: 0.3rem;
+    border-bottom: 2px solid var(--veldt);
+    display: inline-block;
+  }
+  .pullquote {
+    border-left: 3px solid var(--veldt);
+    padding: 0.8rem 1.5rem;
+    margin: 2rem 0;
+    background: var(--mist);
+    font-style: italic;
+    font-size: 1.05rem;
+    color: var(--sepia);
+    line-height: 1.6;
+  }
+  .theme-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1rem;
+    margin: 1.5rem 0;
+  }
+  .theme-pill {
+    background: var(--dust);
+    border: 1px solid var(--rule);
+    border-left: 3px solid var(--veldt);
+    padding: 0.7rem 1rem;
+    font-size: 0.85rem;
+  }
+  .theme-pill strong {
+    display: block;
+    font-family: 'Playfair Display', serif;
+    font-size: 0.95rem;
+    color: var(--ink);
+    margin-bottom: 0.2rem;
+  }
+  .theme-pill span { color: var(--earth); }
+
+  /* ── SONG CARDS ── */
+  .songs-section { padding: 3rem 0; }
+
+  .song-card {
+    margin-bottom: 2.5rem;
+    border: 1px solid var(--rule);
+    border-top: 3px solid var(--earth);
+    background: var(--mist);
+    scroll-margin-top: 2rem;
+  }
+  .song-card:nth-child(5n+1) { border-top-color: var(--red-earth); }
+  .song-card:nth-child(5n+2) { border-top-color: var(--earth); }
+  .song-card:nth-child(5n+3) { border-top-color: var(--veldt); }
+  .song-card:nth-child(5n+4) { border-top-color: var(--sky); }
+  .song-card:nth-child(5n+5) { border-top-color: var(--sepia); }
+
+  .song-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.3rem 1.5rem 1rem;
+    border-bottom: 1px solid var(--rule);
+    cursor: pointer;
+    user-select: none;
+  }
+  .song-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    color: var(--earth);
+    padding-top: 0.35rem;
+    flex-shrink: 0;
+    min-width: 2rem;
+  }
+  .song-title-block { flex: 1; }
+  .song-title-block h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--ink);
+    line-height: 1.2;
+  }
+  .song-title-block .song-meta {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--earth);
+    margin-top: 0.3rem;
+  }
+  .tag-row {
+    display: flex; flex-wrap: wrap; gap: 0.4rem;
+    padding: 0 1.5rem 0.9rem;
+  }
+  .tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.6rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    background: var(--dust);
+    color: var(--earth);
+    border: 1px solid var(--rule);
+    padding: 0.2rem 0.55rem;
+  }
+  .song-body {
+    padding: 1.2rem 1.5rem 1.5rem;
+  }
+  .song-body p { margin-bottom: 1.1rem; color: var(--sepia); font-size: 0.95rem; }
+  .song-body p:last-child { margin-bottom: 0; }
+  .analysis-head {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.62rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--earth);
+    margin: 1.2rem 0 0.5rem;
+    display: flex; align-items: center; gap: 0.6rem;
+  }
+  .analysis-head::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--rule);
+  }
+  .rating-bar {
+    display: flex; align-items: center; gap: 0.6rem;
+    margin: 1rem 0 0;
+  }
+  .rating-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.62rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--earth);
+    min-width: 5.5rem;
+  }
+  .stars { color: var(--veldt); font-size: 0.85rem; letter-spacing: 0.05em; }
+  .stars .empty { color: var(--rule); }
+
+  /* ── EXECUTIVE SUMMARY ── */
+  .exec-summary {
+    padding: 3.5rem 0 4rem;
+  }
+  .exec-summary p { margin-bottom: 1.4rem; color: var(--sepia); }
+  .exec-summary h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--ink);
+    margin: 2.5rem 0 0.8rem;
+    padding-bottom: 0.3rem;
+    border-bottom: 2px solid var(--veldt);
+    display: inline-block;
+  }
+  .verdict-box {
+    background: var(--sepia);
+    color: var(--dust);
+    padding: 2.5rem 2rem;
+    margin: 3rem -2rem 0;
+  }
+  .verdict-box .eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1rem;
+  }
+  .verdict-box h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: var(--dust);
+    margin-bottom: 1.2rem;
+  }
+  .verdict-box p { color: var(--rule); font-size: 0.95rem; margin-bottom: 1rem; line-height: 1.7; }
+
+  .stat-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+    gap: 1px;
+    background: var(--rule);
+    margin: 2.5rem 0;
+    border: 1px solid var(--rule);
+  }
+  .stat-cell {
+    background: var(--mist);
+    padding: 1.2rem;
+    text-align: center;
+  }
+  .stat-cell .stat-val {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--red-earth);
+    line-height: 1;
+  }
+  .stat-cell .stat-lab {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.6rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--earth);
+    margin-top: 0.3rem;
+  }
+
+  footer {
+    background: var(--ink);
+    color: #4a3a2e;
+    text-align: center;
+    padding: 2rem;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  footer span { color: var(--earth); }
+
+  @media (max-width: 600px) {
+    body { font-size: 15px; }
+    .page { padding: 0 1rem; }
+    .section-banner, .broad-review, .verdict-box { margin: 0 -1rem; }
+    .song-header { flex-direction: column; gap: 0.3rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════ MASTHEAD ═══════════════════════════ -->
+<header class="masthead">
+  <div class="masthead-eyebrow">Letterkundige Resensie · Volledige Katalogus</div>
+  <h1><em>Die Stem van die Veld</em></h1>
+  <div class="masthead-sub">
+    'n Omvattende ontleding van AJ du Toit se liedtekste (46 liedere)
+  </div>
+  <div class="gold-rule"></div>
+  <div class="masthead-meta">Saamgestel: Junie 2026 &nbsp;·&nbsp; Ko-skrywer: Jaco &nbsp;·&nbsp; 46 liedere ontleed</div>
+</header>
+
+<!-- ═══════════════════════════ TOC ═══════════════════════════ -->
+<nav class="toc-wrapper" aria-label="Inhoudsopgawe">
+  <div class="page">
+    <h2>Inhoudsopgawe</h2>
+    <div class="toc-grid">
+      <a href="#broad"><span class="toc-num">§1</span>Omvattende Resensie</a>
+      <a href="#songs"><span class="toc-num">§2</span>Lied-vir-Lied Ontleding</a>
+      <a href="#s01"><span class="toc-num">01</span>Die Bosveld se Polsslag</a>
+      <a href="#s02"><span class="toc-num">02</span>Drome en Herinneringe</a>
+      <a href="#s03"><span class="toc-num">03</span>Boerelewe</a>
+      <a href="#s04"><span class="toc-num">04</span>Turbulensie</a>
+      <a href="#s05"><span class="toc-num">05</span>Doppler-Effek</a>
+      <a href="#s06"><span class="toc-num">06</span>Energiebalans</a>
+      <a href="#s07"><span class="toc-num">07</span>Resonansie</a>
+      <a href="#s08"><span class="toc-num">08</span>Latente Hitte</a>
+      <a href="#s09"><span class="toc-num">09</span>Laat Hulle Maar</a>
+      <a href="#s10"><span class="toc-num">10</span>Engele Geskenke</a>
+      <a href="#s11"><span class="toc-num">11</span>Magneties</a>
+      <a href="#s12"><span class="toc-num">12</span>Maanlig op my Siel</a>
+      <a href="#s13"><span class="toc-num">13</span>Nog 'n Dag Minder</a>
+      <a href="#s14"><span class="toc-num">14</span>Vir Ewig Stil</a>
+      <a href="#s15"><span class="toc-num">15</span>Silver Seed</a>
+      <a href="#s16"><span class="toc-num">16</span>Sout van die Aarde</a>
+      <a href="#s17"><span class="toc-num">17</span>Onweer oor Magaliesberg</a>
+      <a href="#s18"><span class="toc-num">18</span>Biltong in die Sneeu</a>
+      <a href="#s19"><span class="toc-num">19</span>Haas en Skilpad</a>
+      <a href="#s20"><span class="toc-num">20</span>My Stookketel</a>
+      <a href="#s21"><span class="toc-num">21</span>Grafsteenblommetjies</a>
+      <a href="#s22"><span class="toc-num">22</span>Voetspore</a>
+      <a href="#s23"><span class="toc-num">23</span>Bloed op die Grond</a>
+      <a href="#s24"><span class="toc-num">24</span>Die Beeld in my Klip</a>
+      <a href="#s25"><span class="toc-num">25</span>Die Sleutelbos</a>
+      <a href="#s26"><span class="toc-num">26</span>Die Skerm wat Steel</a>
+      <a href="#s27"><span class="toc-num">27</span>Hoëveld Donderstorms</a>
+      <a href="#s28"><span class="toc-num">28</span>Die Gewig van Vlerke</a>
+      <a href="#s29"><span class="toc-num">29</span>Die Vuurpyl</a>
+      <a href="#s30"><span class="toc-num">30</span>My Grondpad</a>
+      <a href="#s31"><span class="toc-num">31</span>Horlosie Sonder Hande</a>
+      <a href="#s32"><span class="toc-num">32</span>My Oneindige Sirkel</a>
+      <a href="#s33"><span class="toc-num">33</span>Sandkastele</a>
+      <a href="#s34"><span class="toc-num">34</span>The Last Before My First</a>
+      <a href="#s35"><span class="toc-num">35</span>Sewe Sluiers</a>
+      <a href="#s36"><span class="toc-num">36</span>Die Gulsige Hond</a>
+      <a href="#s37"><span class="toc-num">37</span>Rooiwyn en Spyt</a>
+      <a href="#s38"><span class="toc-num">38</span>Die Laaste Afrikaners</a>
+      <a href="#s39"><span class="toc-num">39</span>Tyd se Dief</a>
+      <a href="#s40"><span class="toc-num">40</span>Die Laaste Verjaarsdag Kers</a>
+      <a href="#s41"><span class="toc-num">41</span>Analoog</a>
+      <a href="#s42"><span class="toc-num">42</span>Braaivleis en Bier</a>
+      <a href="#s43"><span class="toc-num">43</span>Die Depressie Monster</a>
+      <a href="#s44"><span class="toc-num">44</span>Vernietig My</a>
+      <a href="#s45"><span class="toc-num">45</span>Hierdie Grond</a>
+      <a href="#s46"><span class="toc-num">46+</span>Verdere liedere (15)</a>
+      <a href="#exec"><span class="toc-num">§3</span>Executive Summary</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ═══════════════════════════ BROAD REVIEW ═══════════════════════════ -->
+<main>
+<div class="page">
+
+<section class="broad-review" id="broad">
+
+  <div class="section-banner">
+    <div class="eyebrow">Afdeling Een</div>
+    <h2>Omvattende <em>Letterkundige Resensie</em></h2>
+  </div>
+
+  <div style="height:2.5rem"></div>
+
+  <p>AJ du Toit se liedkatalogus verteenwoordig een van die mees intellektueel ambisieuse en emosioneel digte korpusse in kontemporêre Afrikaanse musiek. Hierdie is geen gemaklike populêre vermaak nie — dit is 'n werksame wisselwerking tussen wetenskaplike denkraamwerke, persoonlike belydenis, kulturele bestendiging en geestelike worsteling, alles saamgeweef in die taal van die veld, die vuur, en die sagte Suid-Afrikaanse lug.</p>
+
+  <p>Wat AJ du Toit onmiddellik onderskei van sy eweknieë, is sy konsekwente gebruik van fisika, chemie en ingenieurswese as <em>primêre metaforiese taal</em>. Waar ander sangers na die hart kyk, kyk Du Toit na die struktuur van materie. Latente hitte, Reynolds-getalle, die Doppler-effek, Schumann-resonansie, eksotermiese reaksies, magnetiese velde — hierdie is nie ornamente nie, maar die geraamte van sy siening van menswees. Dit skep 'n unieke taal wat terselfdertyd wetenskaplik-presiese en diep persoonlik is.</p>
+
+  <div class="pullquote">
+    "Die aarde vibreer met Schumann se frekwensie / Elke sekonde - elke nag - elke jaar / En my liggaam - hy onthou die taal / Voor die stad hom geleer het om te vergeet"<br>
+    <small style="color:var(--earth);">— Die Bosveld se Polsslag</small>
+  </div>
+
+  <h3>Die Tematise Argitek</h3>
+
+  <p>Du Toit se katalogus is nie 'n willekeurige versameling liedere nie — dit is 'n argitektoniese geheel. Elke tema keer terug in verskillende gedaantes, soos musiekale motiewe in 'n simfonie. Die veld en die natuur as herstellende krag (Bosveld, Magaliesberg, Hoëveld), tyd as skatkis én dief, die vader-seun-dinamika, kulturele identiteit, en die wetenskap van menslike verhoudings — dit alles bou op mekaar.</p>
+
+  <div class="theme-grid">
+    <div class="theme-pill"><strong>Wetenskap as Siel</strong><span>Fisika, chemie en ingenieurswese as venster op menswees</span></div>
+    <div class="theme-pill"><strong>Die Veld as Tempel</strong><span>Natuur — Bosveld, Magaliesberg, Hoëveld — as heilige ruimte</span></div>
+    <div class="theme-pill"><strong>Vaderskap</strong><span>Diep en herhaaldelik verken — biologiese sowel as geskenkte vaderskap</span></div>
+    <div class="theme-pill"><strong>Verganklikheid</strong><span>Tyd, dood, spyt en die waarde van elke oomblik</span></div>
+    <div class="theme-pill"><strong>Kulturele Identiteit</strong><span>Afrikaanstaligheid, Boereerfenis en die pyn van emigrasie</span></div>
+    <div class="theme-pill"><strong>Sielkundige Eerlikheid</strong><span>Depressie, maskers, patriargale pyn en genesing</span></div>
+    <div class="theme-pill"><strong>Verhoudings as Chemie</strong><span>Mense as eksotermiese of endotermiese reaksies</span></div>
+    <div class="theme-pill"><strong>Geestelike Soeke</strong><span>Geloof, genade en die Vader as anker in chaos</span></div>
+  </div>
+
+  <h3>Taalgebruik en Styl</h3>
+
+  <p>Du Toit skryf in 'n toeganklike dog digte Afrikaans. Hy vermy die kunstige of die gekrulde — sy taal is grond-naby, soos die stof waarna hy so dikwels verwys. Sy sinne is dikwels kort, perkussief, asof elkeen 'n voetval op die aarde is. Tog bereik hy oomblikke van grootse liriese skoonheid, veral in die afsluitende reëls van liedere ("Die see beweeg nog… Die wolf huil alweer…"). Hierdie "afsluitings" is 'n kenmerk van sy skryfstyl — stadig afdalende, amper gesproke epiloge wat die luisteraar toelaat om in die bing te bly sit.</p>
+
+  <p>Sy gebruik van die tweede persoon ("jy") is strategies: dit skep onmiddellike intimiteit, soos 'n gesprek tussen twee mense wat mekaar ken. Die luisteraar word nie toeskouer nie, maar mededeelnemer. Dit is 'n subtiele retoriese keuse wat sy liedere groot gevoelsresonaansie gee.</p>
+
+  <h3>Strukturele Briljansie</h3>
+
+  <p>Du Toit se beste liedere volg 'n drieledige struktuur: <strong>(1) die wetenskaplike konsep word ingelei</strong>, <strong>(2) dit word op die persoonlike lewe toegepas</strong>, en <strong>(3) 'n universele waarheid word afgelei</strong>. Hierdie struktuur is by uitstek sigbaar in Latente Hitte, Turbulensie, Resonansie, Energiebalans en Doppler-Effek — die vyf liedere wat as die intellektuele kern van die katalogus beskou kan word.</p>
+
+  <h3>Die Emosionele Spektrum</h3>
+
+  <p>Die katalogus dek 'n verbasende emosionele spektrum: van die uitbundige fees van Braaivleis en Bier en Meel op die Vloer, tot die donker binnekamers van Die Depressie Monster en Sewe Sluiers; van die tedere ouerliefde van Vandag is jy my Dogter en Engele Geskenke, tot die politieke gelaaiheid van Bloed op die Grond en Die Laaste Afrikaners. Dit is 'n katalogus van 'n volwasse man wat na alles kyk — en dit alles raaksien.</p>
+
+  <h3>Swakhede en Groeipunte</h3>
+
+  <p>Waar die katalogus soms struikel, is in die meer didaktiese liedere — waar die boodskap té duidelik uitgespreek word en die poëtiese beweeglikheid effens verlore gaan. Liedere soos Laat Hulle Maar en Die Laaste Afrikaners is kragtig maar sinjaleer hul boodskap soms te luid, waar 'n groter vertrouenheid in beeld en metafoor 'n nog kragtiger effek kon gehad het. Dit is egter 'n klein beswaar teen 'n andersinds indrukwekkende liggaam van werk.</p>
+
+  <div class="stat-row">
+    <div class="stat-cell"><div class="stat-val">46</div><div class="stat-lab">Liedere ontleed</div></div>
+    <div class="stat-cell"><div class="stat-val">8+</div><div class="stat-lab">Wetenskaplike konsepte</div></div>
+    <div class="stat-cell"><div class="stat-val">3</div><div class="stat-lab">Tale (Afr/Eng)</div></div>
+    <div class="stat-cell"><div class="stat-val">∞</div><div class="stat-lab">Emosionele diepte</div></div>
+  </div>
+
+</section>
+
+<!-- ═══════════════════════════ SONG BY SONG ═══════════════════════════ -->
+<section class="songs-section" id="songs">
+
+  <div class="section-banner">
+    <div class="eyebrow">Afdeling Twee</div>
+    <h2>Lied-vir-Lied <em>Ontleding</em></h2>
+  </div>
+
+  <div style="height:2rem"></div>
+
+  <!-- ── 01 ── -->
+  <article class="song-card" id="s01">
+    <div class="song-header">
+      <div class="song-num">01</div>
+      <div class="song-title-block">
+        <h3>Die Bosveld se Polsslag</h3>
+        <div class="song-meta">Taal: Afrikaans · Tema: Natuur / Resonansie / Healing</div>
+      </div>
+    </div>
+    <div class="tag-row">
+      <span class="tag">Schumann-resonansie</span>
+      <span class="tag">Natuur</span>
+      <span class="tag">Grounding</span>
+      <span class="tag">Stadslewe vs Natuur</span>
+    </div>
+    <div class="song-body">
+      <div class="analysis-head">Kernboodskap</div>
+      <p>Die moderne stad verander ons "natuurlike frekwensie" — ons vibrasie, ons innerlike ritme. Die bosveld, wat Schumann-frekwensie (7,83 Hz) uitstraal, herstel wat die stad gebreek het. Terugkeer na die natuur is nie ontsnapping nie, maar her-instemming.</p>
+      <div class="analysis-head">Letterkundige Ontleding</div>
+      <p>Die lied open met 'n fisiese indringingsmetafoor — die stad "krap" in die binneste — wat dadelik visserali is. Deur die lied bou Du Toit op die konsep van frekwensie: die stad versteur dit, die bosveld herstel dit. Die sleutelfrase "instem" (tuning) word herhaal as 'n mantra van heling. Die slotreëls — "Sewe-punt-ag-drie hertz… Ingestem… Bevredig… Bevrydend… Herlaai" — laat die teks self vertraag en ineenglip soos 'n liggaam wat tot rus kom. Uiters geslaagde vorm-en-inhoud-samesmelting.</p>
+      <div class="analysis-head">Opvallende tegniek</div>
+      <p>Die gebruik van 'n werklike wetenskaplike frekwensie (7,83 Hz) gee die lied 'n besonderse kredietwaardigheid en verankering. Dit is nie bloot metafoor nie — die wetenskap bestaan, en die lied bou dit in sy struktuur in.</p>
+      <div class="rating-bar">
+        <span class="rating-label">Letterkundige waarde</span>
+        <span class="stars">★★★★<span class="empty">★</span></span>
+      </div>
+    </div>
+  </article>
+
+  <!-- ── 02 ── -->
+  <article class="song-card" id="s02">
+    <div class="song-header">
+      <div class="song-num">02</div>
+      <div class="song-title-block">
+        <h3>Drome en Herinneringe</h3>
+        <div class="song-meta">Taal: Afrikaans · Tema: Tyd / Nostalgie / Vaderskap</div>
+      </div>
+    </div>
+    <div class="tag-row">
+      <span class="tag">Nostalgie</span>
+      <span class="tag">Tyd</span>
+      <span class="tag">Vader-seun</span>
+      <span class="tag">Musiek as venster</span>
+    </div>
+    <div class="song-body">
+      <div class="analysis-head">Kernboodskap</div>
+      <p>Dieselfde liedjie word deur 'n veertienjarige as venster na die toekoms gehoor, en deur 'n ouer man as venster na die verlede. Tyd verander nie die musiek nie — dit verander ons. Hierdie dualiteit word ontgin deur 'n pa wat sy seun dophou en hom in sy eie jeug herken.</p>
+      <div class="analysis-head">Letterkundige Ontleding</div>
+      <p>Een van die mees literêr geslaagde liedere in die katalogus. Die sentrale tegniek — dieselfde liedjie deur twee verskillende tydsraamwerke — is eenvoudig maar kragtig. Die wisseling van plaat → kasset → laserskyf → MP3 → YouTube is 'n subtiele chronologiese geskiedenislyn wat die verloop van 'n lewe inbou sonder om dit te verduidelik. Die paradoks "van drome na herinneringe — en terug" se sirkulariteit is treffend. Die seun se "oorfone" weerspieël die pa se "goedkoop radio" — generasionele kontinuïteit in verskillende mediums.</p>
+      <div class="analysis-head">Opvallende tegniek</div>
+      <p>Du Toit se besluit om géén direkte gesprek tussen vader en seun te skryf nie ("maar ek sê niks — ek kyk net") is letterkundig moedig — stilte as taal is kragtiger as woorde hier.</p>
+      <div class="rating-bar">
+        <span class="rating-label">Letterkundige waarde</span>
+        <span class="stars">★★★★★</span>
+      </div>
+    </div>
+  </article>
+
+  <!-- ── 03 ── -->
+  <article class="song-card" id="s03">
+    <div class="song-header">
+      <div class="song-num">03</div>
+      <div class="song-title-block">
+        <h3>Boerelewe</h3>
+        <div class="song-meta">Taal: Afrikaans · Tema: Kultuur / Platteland / Identiteit</div>
+      </div>
+    </div>
+    <div class="tag-row">
+      <span class="tag">Platteland</span>
+      <span class="tag">Tradisie</span>
+      <span class="tag">Nostalgie</span>
+      <span class="tag">Gemeenskap</span>
+    </div>
+    <div class="song-body">
+      <div class="analysis-head">Kernboodskap</div>
+      <p>'n Viering van die eenvoudige plattelandse lewe — nie as idealisering nie, maar as herinnering aan wat werklik saak maak. Grond, mense, tafel, kitaar. Die lied staan teen die gevoel dat die platteland "sterf", en bevestig: solank die haan kraai, leef die Boerelewe.</p>
+      <div class="analysis-head">Letterkundige Ontleding</div>
+      <p>Boerelewe werk deur akkumulasie van konkrete, sintuiglike beelde: die koffie wat prut, die kaalvoet kinders, die koeksisters, die verbode witblits, die ou kitaar. Dit is 'n sorgvuldig saamgestelde sensoriese tableau. Die versugtingsmetafoor ("Hulle sê die platteland sterf") skep spanning wat deur die herhaaldelike chorus opgelos word — nie met argumentasie nie, maar met bestaan: die haan kraai nóg, die koffie prut nóg. Bestaan as weerlegging van ondergang.</p>
+      <div class="rating-bar">
+        <span class="rating-label">Letterkundige waarde</span>
+        <span class="stars">★★★★<span class="empty">★</span></span>
+      </div>
+    </div>
+  </article>
+
+  <!-- ── 04 ── -->
+  <article class="song-card" id="s04">
+    <div class="song-header">
+      <div class="song-num">04</div>
+      <div class="song-title-block">
+        <h3>Turbulensie</h3>
+        <div class="song-meta">Taal: Afrikaans · Tema: Vloeimeganika / Stres / Balans</div>
+      </div>
+    </div>
+    <div class="tag-row">
+      <span class="tag">Reynolds-getal</span>
+      <span class="tag">Vloeimeganika</span>
+      <span class="tag">Stres</span>
+      <span class="tag">Werkdruk</span>
+      <span class="tag">Laminêre vloei</span>
+    </div>
+    <div class="song-body">
+      <div class="analysis-head">Kernboodskap</div>
+      <p>Turbulensie in 'n vloeistof ontstaan wanneer spoed die Reynolds-punt oorskry — laminêre (ordelike) vloei ineenstort en chaos volg. Du Toit pas hierdie konsep op die moderne werkerslewe toe: wanneer spoed die kapasiteit van jou "kanaal" oorskry, volg chaos. Die oplossing is nie om te stop nie, maar om spoed te verminder en laminêre vloei te herstel.</p>
+      <div class="analysis-head">Letterkundige Ontleding</div>
+      <p>Hierdie is een van die intellektueel mees bevredigende liedere in die katalogus. Die wetenskaplike terminologie — Reynolds punt, laminêr, grenslaag — word nie vereenvoudig nie, maar presies gebruik, en dit versterk eerder as verswak die poëtiese krag. Die sleutelinsig ("turbulensie is nie jou toestand nie / dit is net jou spoed") is 'n kragtige herskrywing van 'n bekende gevoel. Die lied eindig met 'n herhaaldelike siklus van opdragte ("stadiger… laminêr… geordend") wat die woorde self laminêr maak.</p>
+      <div class="rating-bar">
+        <span class="rating-label">Letterkundige waarde</span>
+        <span class="stars">★★★★★</span>
+      </div>
+    </div>
+  </article>
+
+  <!-- ── 05 ── -->
+  <article class="song-card" id="s05">
+    <div class="song-header">
+      <div class="song-num">05</div>
+      <div class="song-title-block">
+        <h3>Doppler-Effek</h3>
+        <div class="song-meta">Taal: Afrikaans · Tema: Akoestika / Empatie / Perspektief</div>
+      </div>
+    </div>
+    <div class="tag-row">
+      <span class="tag">Doppler-effek</span>
+      <span class="tag">Empatie</span>
+      <span class="tag">Verwysingsraam</span>
+      <span class="tag">Oordeel</span>
+    </div>
+    <div class="song-body">
+      <div class="analysis-head">Kernboodskap</div>
+      <p>Die Doppler-effek: 'n waarnemer wat stilstaan, hoor 'n ambulans se klank verwring terwyl dit verbyryd. Die bestuurder hoor net een konstante toon — want hy beweeg saam die bron. Jou verwysingsraam bepaal wat jy hoor, nie die waarheid nie. Empatie is fisika: beweeg saam die bron, dan hoor jy die ware klank.</p>
+      <div class="analysis-head">Letterkundige Ontleding</div>
+      <p>"Empatie is fisika" is miskien Du Toit se briljantste enkelfrase. Die konsep is elegant: oordeel kom van stilstand, begrip van beweging. Die kantlyn as metafoor vir onbetrokkenheid is treffend — 'n veilige plek van nul-risiko-oordeel. Die oproep om "saam met die ambulans te beweeg" is letterlik onmoontlik, wat dit as metafoor juis so kragtig maak — dit vereis 'n buitengewone moeite wat die meeste mense nie bereid is om te doen nie. Die slotreël — "Hy het altyd dieselfde toon gehoor" — is meesterlik in sy eenvoud.</p>
+      <div class="rating-bar">
+        <span class="rating-label">Letterkundige waarde</span>
+        <span class="stars">★★★★★</span>
+      </div>
+    </div>
+  </article>
+
+  <!-- ── 06 ── -->
+  <article class="song-card" id="s06">
+    <div class="song-header">
+      <div class="song-num">06</div>
+      <div class="song-title-block">
+        <h3>Energiebalans</h3>
+        <div class="song-meta">Taal: Afrikaans · Tema: Chemie / Verhoudings / Energie</div>
+      </div>
+    </div>
+    <div class="tag-row">
+      <span class="tag">Eksotermiese reaksie</span>
+      <span class="tag">Endotermiese reaksie</span>
+      <span class="tag">Sosiale energie</span>
+      <span class="tag">Grense</span>
+    </div>
+    <div class="song-body">
+      <div class="analysis-head">Kernboodskap</div>
+      <p>Sommige mense is endotermies — hulle absorbeer energie en laat jou leeg. Ander is eksotermies — hulle vrystel energie en laat jou gevul. Die lied is 'n pleidooi vir bewuste energiebestuur in sosiale verhoudings.</p>
+      <div class="analysis-head">Letterkundige Ontleding</div>
+      <p>Die chemiese terminologie word konsekwent deurgetrek — "reservoir", "aktiveringsenergie", "katalis", "opbrêngs" — en dit skep 'n koherente metaforiese raamwerk wat nooit instort nie. Die katalis-konsep (mense wat dit makliker maak om jou beste weergawe te wees) is besonder insigvol. Die lied eindig met 'n praktiese oproep: ken jou endoterms, beperk die onttrekkings, koester die eksoterms. Dit is sielkunde in chemiese taal.</p>
+      <div class="rating-bar">
+        <span class="rating-label">Letterkundige waarde</span>
+        <span class="stars">★★★★★</span>
+      </div>
+    </div>
+  </article>
+
+  <!-- ── 07 ── -->
+  <article class="song-card" id="s07">
+    <div class="song-header">
+      <div class="song-num">07</div>
+      <div class="song-title-block">
+        <h3>Resonansie</h3>
+        <div class="song-meta">Taal: Afrikaans · Tema: Fisika / Verbintenis / Kommunikasie</div>
+      </div>
+    </div>
+    <div class="tag-row">
+      <span class="tag">Resonansie</span>
+      <span class="tag">Konstruktiewe interferensie</span>
+      <span class="tag">Destruktiewe interferensie</span>
+      <span class="tag">Menslike verbintenis</span>
+    </div>
+    <div class="song-body">
+      <div class="analysis-head">Kernboodskap</div>
+      <p>Wanneer twee golwe in fase is, versterk hulle mekaar (konstruktiewe interferensie). Wanneer hulle uit fase is, kanselleer hulle mekaar (destruktiewe interferensie). Du Toit gebruik hierdie konsep om te verduidelik waarom sommige mense onmiddellik "klik" en ander altyd misverstaan. Dit is nie persoonlikheid of keuse nie — dit is frekwensie.</p>
+      <div class="analysis-head">Letterkundige Ontleding</div>
+      <p>Resonansie is een van die liedere wat die breedste toepassingsvlak het: dit dek vriendskap, kollegialiteit, liefde en familie. Die insig dat "geen skuld, geen blaam" in destruktiewe verhoudings geld, is emosioneel volwasse en baie nodig. Die lied verduidelik sonder te oordeel. Die slotfrase — "Konstruktief…" — hang in die lug soos 'n volledige volsin wat oop eindig.</p>
+      <div class="rating-bar">
+        <span class="rating-label">Letterkundige waarde</span>
+        <span class="stars">★★★★★</span>
+      </div>
+    </div>
+  </article>
+
+  <!-- ── 08 ── -->
+  <article class="song-card" id="s08">
+    <div class="song-header">
+      <div class="song-num">08</div>
+      <div class="song-title-block">
+        <h3>Latente Hitte</h3>
+        <div class="song-meta">Taal: Afrikaans · Tema: Termodinamika / Groei / Volharding</div>
+      </div>
+    </div>
+    <div class="tag-row">
+      <span class="tag">Latente hitte</span>
+      <span class="tag">Fase-verandering</span>
+      <span class="tag">Volharding</span>
+      <span class="tag">Onsigbare groei</span>
+    </div>
+    <div class="song-body">
+      <div class="analysis-head">Kernboodskap</div>
+      <p>Tydens faseoorgang (ys → water → stoom) styg die temperatuur nié, selfs al word energie toegevoeg. Hierdie "latente hitte" is onsigbaar maar werk ondergronds aan struktuurverandering. Du Toit sien hierdie proses as 'n metafoor vir persoonlike groei: wanneer die termometer nie beweeg nie, is dit nie stilstand nie — dit is die mees kragtige fase van transformasie.</p>
+      <div class="analysis-head">Letterkundige Ontleding</div>
+      <p>Een van die ryk-ste konseptuele liedere in die katalogus. Die drievoudige fase-struktuur (ys → water → stoom) korrespondeer met drie lewensfases van groei, en die idee dat elke deurbraak 'n "latente periode" verg, is 'n kragtige uitdaging aan 'n resultate-georiënteerde kultuur. "Die termometer lieg — die werk is gedoen" is 'n onvergeetlike reël. Die lied bied troos aan almal wat voel hulle werk sonder sigbare resultate.</p>
+      <div class="rating-bar">
+        <span class="rating-label">Letterkundige waarde</span>
+        <span class="stars">★★★★★</span>
+      </div>
+    </div>
+  </article>
+
+  <!-- ── 09 ── -->
+  <article class="song-card" id="s09">
+    <div class="song-header">
+      <div class="song-num">09</div>
+      <div class="song-title-block">
+        <h3>Laat Hulle Maar</h3>
+        <div class="song-meta">Taal: Afrikaans · Tema: Vrede / Oordeel / Identiteit</div>
+      </div>
+    </div>
+    <div class="tag-row">
+      <span class="tag">Selfaanvaarding</span>
+      <span class="tag">Oordeel</span>
+      <span class="tag">Innerlike vrede</span>
+    </div>
+    <div class="song-body">
+      <div class="analysis-head">Kernboodskap</div>
+      <p>Ander mense se oordeel is hul eie spieël, nie joune nie. Dié wat jou afbreek, bou iets in hulself op. Dié wat jou oordeel, ken hulself nie. Die enigste antwoord is om nie te verdedig nie, maar te leef — jou lewe is jou antwoord.</p>
+      <div class="analysis-head">Letterkundige Ontleding</div>
+      <p>Hierdie lied is die mees direk didakties in die katalogus — minder metafoor, meer toespraak. Dit het sy voordele (helderheid, krag) en sy nadele (minder poëtiese diepte). Die spieël-metafoor ("hulle oordeel is hulle spieël") is treffend en sielkundig trefvast. Die herhalende "laat hulle maar" skep 'n mantra-effek wat in liedverband goed sal werk. Minder sofistikeerd as die wetenskaplike liedere, maar emosioneel kragtig.</p>
+      <div class="rating-bar">
+        <span class="rating-label">Letterkundige waarde</span>
+        <span class="stars">★★★<span class="empty">★★</span></span>
+      </div>
+    </div>
+  </article>
+
+  <!-- ── 10 ── -->
+  <article class="song-card" id="s10">
+    <div class="song-header">
+      <div class="song-num">10</div>
+      <div class="song-title-block">
+        <h3>Engele Geskenke</h3>
+        <div class="song-meta">Taal: Afrikaans · Tema: Kleinkindsorg / Genade / Familie</div>
+      </div>
+    </div>
+    <div class="tag-row">
+      <span class="tag">Kleinkinders</span>
+      <span class="tag">Oupa &amp; Ouma</span>
+      <span class="tag">Genade</span>
+      <span class="tag">Oorgenerasionele liefde</span>
+    </div>
+    <div class="song-body">
+      <div class="analysis-head">Kernboodskap</div>
+      <p>Kleinkinders is nie toevallig nie — hulle is "geleen" engele. Ouma en Oupa leer geduld deur elke nag, elke traan, elke lag. Die lied wend 'n dubbele perspektief aan: die grootouers wat dankbaar is vir die kinders, en die kinders (deur die lied verteenwoordig) wat dankbaar is vir die grootouers.</p>
+      <div class="analysis-head">Letterkundige Ontleding</div>
+      <p>Die "geleen"-metafoor is teologies diepgaande — dit erken die tydelikheid van elke verhouding sonder hartseer. Die strukturele skuif midde-in die lied (van oupa-en-ouma se perspektief na die kinders s'n) is 'n geslaagde dramatiese wending. Die slotfrase "Twee Oumas… Twee Oupas… Baie kinders… Een pad" is eenvoudig en innig terselfdertyd.</p>
+      <div class="rating-bar">
+        <span class="rating-label">Letterkundige waarde</span>
+        <span class="stars">★★★★<span class="empty">★</span></span>
+      </div>
+    </div>
+  </article>
+
+  <!-- ── 11 ── -->
+  <article class="song-card" id="s11">
+    <div class="song-header">
+      <div class="song-num">11</div>
+      <div class="song-title-block">
+        <h3>Magneties</h3>
+        <div class="song-meta">Taal: Afrikaans · Tema: Elektromagnetisme / Liefde / Verskil</div>
+      </div>
+    </div>
+    <div class="tag-row">
+      <span class="tag">Magnetisme</span>
+      <span class="tag">Huwelik</span>
+      <span class="tag">Komplementariteit</span>
+      <span class="tag">Elektromagnete</span>
+    </div>
+    <div class="song-body">
+      <div class="analysis-head">Kernboodskap</div>
+      <p>Teenpole trek aan — dit is nie net romantiese cliché nie, dit is magnetiese wet. Die lied verken hoe verskille in 'n verhouding nie swakhede is nie, maar die bron van gesamentlike krag. Soos 'n elektromagneet meer windings = 'n dieper veld, so versterk elke jaar saam, elke storm deurstaan, die gesamentlike magnetiese veld van die egpaar.</p>
+      <div class="analysis-head">Letterkundige Ontleding</div>
+      <p>Die elektromagnetiese metafoor word konsekwent en gesofistikeerd deurgetrek — generator/motor, windings, veld, pole. Die "generator vs motor" onderskeid (soms wek julle krag vir ander op, soms gebruik julle dit om te groei) is besonder insigvol as beskrywing van egpaardinamika. Die slotfrase "Gekoppel… Een veld… Een krag… Vir altyd… Ons mag!" het die densiteit van 'n magneet self.</p>
+      <div class="rating-bar">
+        <span class="rating-label">Letterkundige waarde</span>
+        <span class="stars">★★★★★</span>
+      </div>
+    </div>
+  </article>
+
+  <!-- ── 12 ── -->
+  <article class="song-card" id="s12">
+    <div class="song-header">
+      <div class="song-num">12</div>
+      <div class="song-title-block">
+        <h3>Maanlig op my Siel</h3>
+        <div class="song-meta">Taal: Afrikaans · Tema: Gravitasie / Invloed / Stille teenwoordigheid</div>
+      </div>
+    </div>
+    <div class="tag-row">
+      <span class="tag">Maansiklus</span>
+      <span class="tag">Stille invloed</span>
+      <span class="tag">Getye</span>
+      <span class="tag">Liefde</span>
+    </div>
+    <div class="song-body">
+      <div class="analysis-head">Kernboodskap</div>
+      <p>Die maan het geen stem nie, geen hande nie — sy beweeg net. Tog beweeg sy die see, roep die wolf en rig die boer se planting. Die grootste invloed is die stilste teenwoordigheid. So is dit ook met die persoon wat die sanger liefhet: hul blote bestaan het 'n onmeetbare impak.</p>
+      <div class="analysis-head">Letterkundige Ontleding</div>
+      <p>Du Toit gebruik die maansiklus (nuwemaan → halfmaan → volmaan → afnemend) as 'n struktuur vir die groei van 'n verhouding — 'n elegante en organiese keuse. Die herhalende paradoks "sy doen niks, maar tog alles / sy sê niks, maar word nog gehoor" is sentraal tot die lied se filosofie van stille mag. 'n Besonder poëties ryke teks.</p>
+      <div class="rating-bar">
+        <span class="rating-label">Letterkundige waarde</span>
+        <span class="stars">★★★★★</span>
+      </div>
+    </div>
+  </article>
+
+  <!-- ── 13 ── -->
+  <article class="song-card" id="s13">
+    <div class="song-header">
+      <div class="song-num">13</div>
+      <div class="song-title-block">
+        <h3>Nog 'n Dag Minder</h3>
+        <div class="song-meta">Taal: Afrikaans · Tema: Tyd / Urgensie / Bewuste lewe</div>
+      </div>
+    </div>
+    <div class="tag-row">
+      <span class="tag">Memento mori</span>
+      <span class="tag">Tyd</span>
+      <span class="tag">Uitstelsug</span>
+      <span class="tag">Aanwesigheid</span>
+    </div>
+    <div class="song-body">
+      <div class="analysis-head">Kernboodskap</div>
+      <p>Môre is nie 'n belofte nie — dit is 'n dag minder. Die klassieke memento mori-tema word hier met vars urgensie behandel: die grysaard op die hospitaalbed huil oor gemiste Sondae, nie oor bankbalanse nie. Elke dag wat verbygaan is 'n kans om te leef, of om te versuim.</p>
+      <div class="analysis-head">Letterkundige Ontleding</div>
+      <p>Die titelskuif — "Nog 'n dag" word "nog 'n dag minder" — is 'n eenvoudige maar kragtige herframing. Die grysaard-beeld is 'n klassieke topos, maar Du Toit verlewendig dit deur spesifisiteit ("Sondae wat hy gemis het", "kinders se gesigte wat hy nie kan onthou nie"). Die paradoks "nog 'n dag minder / maar ook nog 'n dag oor" is die kern van die lied se hoop — verganklikheid as motivasie, nie as wanhoop nie.</p>
+      <div class="rating-bar">
+        <span class="rating-label">Letterkundige waarde</span>
+        <span class="stars">★★★★<span class="empty">★</span></span>
+      </div>
+    </div>
+  </article>
+
+  <!-- ── 14 ── -->
+  <article class="song-card" id="s14">
+    <div class="song-header">
+      <div class="song-num">14</div>
+      <div class="song-title-block">
+        <h3>Vir Ewig Stil</h3>
+        <div class="song-meta">Taal: Afrikaans · Tema: Spyt / Vergifnis / Tyd</div>
+      </div>
+    </div>
+    <div class="tag-row">
+      <span class="tag">Personifikasie</span>
+      <span class="tag">Spyt</span>
+      <span class="tag">Berou</span>
+      <span class="tag">Vergifnis</span>
+    </div>
+    <div class="song-body">
+      <div class="analysis-head">Kernboodskap</div>
+      <p>Spyt kom altyd te laat — hy is 'n argiefhouer van alles wat nooit gesê is nie. Maar spyt is nie die antwoord nie; hy is net die klop aan die deur. Berou maak die deur oop. Die oproep is dringend: bel vandag, vergewe vandag, maak reg vandag — want Spyt kom altyd te laat.</p>
+      <div class="analysis-head">Letterkundige Ontleding</div>
+      <p>Die personifikasie van Spyt as 'n karakter met 'n jas, skoene en sakke vol ongesegde woorde is een van Du Toit se mees oorspronklike beelde. Die onderskeid tussen spyt (gevoel) en berou (handeling) is teologies en sielkundig presies. Die onafsienbare slotreël — "Spyt het laat gekom… En vir ewig stilweg gegaan" — is onvergeetlik.</p>
+      <div class="rating-bar">
+        <span class="rating-label">Letterkundige waarde</span>
+        <span class="stars">★★★★★</span>
+      </div>
+    </div>
+  </article>
+
+  <!-- ── 15 ── -->
+  <article class="song-card" id="s15">
+    <div class="song-header">
+      <div class="song-num">15</div>
+      <div class="song-title-block">
+        <h3>Silver Seed</h3>
+        <div class="song-meta">Taal: Engels · Tema: Verpleging / Dienslewering / Onsigbare helde</div>
+      </div>
+    </div>
+    <div class="tag-row">
+      <span class="tag">Verpleegsters</span>
+      <span class="tag">Onsigbare helde</span>
+      <span class="tag">Diens</span>
+      <span class="tag">Engels</span>
+    </div>
+    <div class="song-body">
+      <div class="analysis-head">Kernboodskap</div>
+      <p>Verpleegsters en ander gesondheidswerkers plant hoop in die donker — soos 'n silwersaad. Hulle kry geen monument nie, geen standbeelde nie. Net die gewig van lewens wat op hulle hande afhang. Die lied is 'n eerbetuiging aan dié wat sien wat ander nie sien nie.</p>
+      <div class="analysis-head">Letterkundige Ontleding</div>
+      <p>Du Toit se sterk Engelse teks toon dat sy liriese vermoë nie aan taal gebonde is nie. Die beeldende reëls — "Behind your eyes lives a library / Of every soul you refused to let flee" — het werklike poëtiese krag. Die "silver seed" metafoor (hoop wat in donkerte geplant word) is eenvoudig maar diep resonant. Die slot — "You're more than a silver seed" — hef die eie metafoor op, wat 'n kragtige retoriese skuif is.</p>
+      <div class="rating-bar">
+        <span class="rating-label">Letterkundige waarde</span>
+        <span class="stars">★★★★★</span>
+      </div>
+    </div>
+  </article>
+
+  <!-- ── 16 ── -->
+  <article class="song-card" id="s16">
+    <div class="song-header">
+      <div class="song-num">16</div>
+      <div class="song-title-block">
+        <h3>Sout van die Aarde</h3>
+        <div class="song-meta">Taal: Afrikaans · Tema: Chemie / Huwelik / Transformasie</div>
+      </div>
+    </div>
+    <div class="tag-row">
+      <span class="tag">Natriumchloried</span>
+      <span class="tag">Chemie</span>
+      <span class="tag">Huwelik</span>
+      <span class="tag">Transformasie deur eenheid</span>
+    </div>
+    <div class="song-body">
+      <div class="analysis-head">Kernboodskap</div>
+      <p>Natrium (ontplof in water) en Chloor (giftige gas) is afsonderlik gevaarlik, maar saam vorm hulle Natriumchloried — die sout wat lewe moontlik maak. Hulle transformeer mekaar. Die lied is 'n chemiese huweliksgedig: twee onstabiele elemente word in verbintenis onontbeerlik.</p>
+      <div class="analysis-head">Letterkundige Ontleding</div>
+      <p>Een van die mees konseptueel gesofistikeerde liedere in die oeuvre. Die feit dat natrium werklik in water ontplof en chloor werklik as gas gebruik is in loopgraafoorlogvoering — dit gee die metafoor 'n fisiese werklikheid wat dit van blote allegorie verhef. Die fyner detail — "800 plus grade om te smelt" (hittevastheid van NaCl se kristalrooster) as beeld vir die onbreekbaarheid van die verbintenis — is presies, wetenskaplik korrek, én poeties kragtig.</p>
+      <div class="rating-bar">
+        <span class="rating-label">Letterkundige waarde</span>
+        <span class="stars">★★★★★</span>
+      </div>
+    </div>
+  </article>
+
+  <!-- ── 17 ── -->
+  <article class="song-card" id="s17">
+    <div class="song-header">
+      <div class="song-num">17</div>
+      <div class="song-title-block">
+        <h3>Onweer oor Magaliesberg</h3>
+        <div class="song-meta">Taal: Afrikaans · Tema: Landskap / Geskiedkundige Diepte / Eksistensialisering</div>
+      </div>
+    </div>
+    <div class="tag-row">
+      <span class="tag">Magaliesberg</span>
+      <span class="tag">Geskiedkundige herinnering</span>
+      <span class="tag">Eksistensie</span>
+      <span class="tag">Suid-Afrika</span>
+    </div>
+    <div class="song-body">
+      <div class="analysis-head">Kernboodskap</div>
+      <p>Die Magaliesberg, ouer as enige menslike pyn, het al Boesmans, Voortrekkers en bloed gesien. Terwyl die spreker in die reën staan met sy onbeantwoorde vrae, bly die berge staan. Die stille antwoord van die geologie is: dit sal verbygaan — maar sal jy ook kan bly staan?</p>
+      <div class="analysis-head">Letterkundige Ontleding</div>
+      <p>Hierdie lied het 'n gewigtigheid wat moeilik te beskryf is. Die Magaliesberg se geologiese ouderdom (2,5 miljard jaar) as kontras met menslike pyn skep 'n perspektief wat troosend én onrustigmakend is. Die stormsimboliek (weerlig = waarheid wat jy nie wil hoor, donder = stemme wat jy probeer stilmaak) is kragtig. Die slotreël — "En ek… Ek staar net in verwondering" — is 'n seldsame oomblik van du Toit wat hom oorgee aan onbeantwoorde vrae. Dit is dalk sy mees eerlike lied.</p>
+      <div class="rating-bar">
+        <span class="rating-label">Letterkundige waarde</span>
+        <span class="stars">★★★★★</span>
+      </div>
+    </div>
+  </article>
+
+  <!-- ── 18 ── -->
+  <article class="song-card" id="s18">
+    <div class="song-header">
+      <div class="song-num">18</div>
+      <div class="song-title-block">
+        <h3>Biltong in die Sneeu</h3>
+        <div class="song-meta">Taal: Afrikaans · Tema: Emigrasie / Vriendskap / Tuisheid</div>
+      </div>
+    </div>
+    <div class="tag-row">
+      <span class="tag">Utah/Salt Lake City</span>
+      <span class="tag">Emigrasie</span>
+      <span class="tag">Vriendskap</span>
+      <span class="tag">Kultuuridentiteit</span>
+    </div>
+    <div class="song-body">
+      <div class="analysis-head">Kernboodskap</div>
+      <p>'n Jong Suid-Afrikaner arriveer alleen in Utah — 'n koue, vreemde land. Vriende wat uitstap soos 'n "wonderwerk van bo" maak tuis wat vreemd was. Biltong en droëwors word die simboliese draers van Suid-Afrikaanse identiteit in die sneeu. Gasvryheid het geen taal nie.</p>
+      <div class="analysis-head">Letterkundige Ontleding</div>
+      <p>Die spesifisiteit van "Salt Lake City" en die kontras van biltong-teen-sneeu is 'n treffende visuele beeld wat die lied veranker. Die herhalende bevestiging "ek is ver — maar ek is nie verlore nie" skep 'n mantra van resiliensie. Die slotreël — "Julle maak vriende — Familie" — is een van die eenvoudigste en treffendste liedslotte in die katalogus.</p>
+      <div class="rating-bar">
+        <span class="rating-label">Letterkundige waarde</span>
+        <span class="stars">★★★★<span class="empty">★</span></span>
+      </div>
+    </div>
+  </article>
+
+  <!-- ── 19 ── -->
+  <article class="song-card" id="s19">
+    <div class="song-header">
+      <div class="song-num">19</div>
+      <div class="song-title-block">
+        <h3>Haas en Skilpad</h3>
+        <div class="song-meta">Taal: Afrikaans · Tema: Sukses / Teenwoordigheid / Werk-lewe balans</div>
+      </div>
+    </div>
+    <div class="tag-row">
+      <span class="tag">Esopus-fabel</span>
+      <span class="tag">Werk-lewe balans</span>
+      <span class="tag">Sukses vs Lewe</span>
+      <span class="tag">Manswees</span>
+    </div>
+    <div class="song-body">
+      <div class="analysis-head">Kernboodskap</div>
+      <p>Die haas wen altyd, maar weet nie meer waarvoor nie. Die skilpad kom nie eerste nie, maar slaap sonder drome van môre en was by elke eerste keer. Die rivier wen nooit — maar is nog hier lank nadat die wenners vergeet is. Sukses sonder aanwesigheid is 'n leë trofee.</p>
+      <div class="analysis-head">Letterkundige Ontleding</div>
+      <p>Du Toit herskryf die klassieke fabel met psigologiese volwassenheid. Die rivier-toevoeging is oorspronklik en besonder treffend: die rivier is nie 'n mededinger nie, maar 'n getuie van tydelikheid. Die erkenning "my vrou het geleer om alleen te slaap / die maatskappy het my naam op 'n sukseslys gesit / maar niemand het my naam in die aand geroep nie" is kaal en eerlik.</p>
+      <div class="rating-bar">
+        <span class="rating-label">Letterkundige waarde</span>
+        <span class="stars">★★★★★</span>
+      </div>
+    </div>
+  </article>
+
+  <!-- ── 20 ── -->
+  <article class="song-card" id="s20">
+    <div class="song-header">
+      <div class="song-num">20</div>
+      <div class="song-title-block">
+        <h3>My Stookketel</h3>
+        <div class="song-meta">Taal: Afrikaans · Tema: Destillasie / Groei / Lyding as transformasie</div>
+      </div>
+    </div>
+    <div class="tag-row">
+      <span class="tag">Brandewyn-distillering</span>
+      <span class="tag">Fermentasie</span>
+      <span class="tag">Transformasie</span>
+      <span class="tag">Mislukking</span>
+    </div>
+    <div class="song-body">
+      <div class="analysis-head">Kernboodskap</div>
+      <p>Die beste brandewyn begin as vrugte wat "sleg word" (fermentasie), gaan deur hitte (distillering) en donker eikevate (veroudering). Lyding is nie 'n fout in die proses nie — dit IS die proses. Die littekens en mislukkings is die karaktereienskappe van die eindproduk.</p>
+      <div class="analysis-head">Letterkundige Ontleding</div>
+      <p>Die distilleringsmetafoor is volhoubaar en diepgaande. Die insig dat mense die brandewyn wil hê sonder die fermentasie, is 'n skerp sosiale kommentaar op ons instant-kultuur. "Platinum Medalje werd" as slotfrase skep 'n kragtige omgekeerde argitek — van "sleg" tot "medalje-wenner" deur die proses self. Oorspronklik en kragtig.</p>
+      <div class="rating-bar">
+        <span class="rating-label">Letterkundige waarde</span>
+        <span class="stars">★★★★★</span>
+      </div>
+    </div>
+  </article>
+
+  <!-- ── 21 ── -->
+  <article class="song-card" id="s21">
+    <div class="song-header">
+      <div class="song-num">21</div>
+      <div class="song-title-block">
+        <h3>Grafsteenblommetjies</h3>
+        <div class="song-meta">Taal: Afrikaans · Tema: Humanitêre krisis / Kamp / Moederliefde</div>
+      </div>
+    </div>
+    <div class="tag-row">
+      <span class="tag">Humanitêre krisis</span>
+      <span class="tag">Vlugtelinge</span>
+      <span class="tag">Moederliefde</span>
+      <span class="tag">Getuienis</span>
+    </div>
+    <div class="song-body">
+      <div class="analysis-head">Kernboodskap</div>
+      <p>'n Moeder in 'n vlugtelingkamp praat. Haar kinders se grafte is die hobbeltjies rondom die kamp. Kosmos groei op kinderkissiegrond. Sy staan tussen haar kind en die dood. Die wêreld wil nie kyk nie — maar die blommetjies bly staan en vertel.</p>
+      <div class="analysis-head">Letterkundige Ontleding</div>
+      <p>Du Toit gaan hier buite sy gewone terrein en skryf vanuit 'n perspektief van uiterse lyding. Die kosmos-as-grafsteenblom beeld is van trekkende eenvoud — mooi, maar groeiend op hartseer grond. Die oënskynlike teenstelling van "blommetjie" (kwesbaar, lig) en "grafsteenhoop" (swaar, dood) skep 'n permanente spanning. Die moeder se mandaat — "vertel" — is ook Du Toit se mandaat as skrywer. Hierdie lied het 'n politieke en morele gewig wat uniek in die katalogus is.</p>
+      <div class="rating-bar">
+        <span class="rating-label">Letterkundige waarde</span>
+        <span class="stars">★★★★★</span>
+      </div>
+    </div>
+  </article>
+
+  <!-- ── 22 ── -->
+  <article class="song-card" id="s22">
+    <div class="song-header">
+      <div class="song-num">22</div>
+      <div class="song-title-block">
+        <h3>Voetspore</h3>
+        <div class="song-meta">Taal: Afrikaans · Tema: Geloof / Genade / Goddelike ondersteuning</div>
+      </div>
+    </div>
+    <div class="tag-row">
+      <span class="tag">Geloof</span>
+      <span class="tag">Voetspore in die sand</span>
+      <span class="tag">Goddelike genade</span>
+      <span class="tag">Vertroue</span>
+    </div>
+    <div class="song-body">
+      <div class="analysis-head">Kernboodskap</div>
+      <p>'n Herwerking van die bekende "Footprints in the Sand" teks — in Afrikaans en met Du Toit se eie stem. Die vraag "Hoekom net een paar spore toe ek U die nodigste gehad het?" kry die antwoord: "Dit was die tyd toe U my gedra het." 'n Lied van geloof wat lyding nie ontken nie, maar dit in 'n groter raamwerk plaas.</p>
+      <div class="analysis-head">Letterkundige Ontleding</div>
+      <p>Die teks is innig en opregtig, hoewel dit voortbou op 'n bekende kulturele teks. Du Toit se eie bydrae lê in die Afrikaanse stemkarakter en die intieme "U"-aanspreekvorm. Die drie-slag struktuur — vraag, stilte, fluisterende antwoord — is dramaties effektief. 'n Trooslied wat sy belofte nakom.</p>
+      <div class="rating-bar">
+        <span class="rating-label">Letterkundige waarde</span>
+        <span class="stars">★★★★<span class="empty">★</span></span>
+      </div>
+    </div>
+  </article>
+
+  <!-- ── 23 ── -->
+  <article class="song-card" id="s23">
+    <div class="song-header">
+      <div class="song-num">23</div>
+      <div class="song-title-block">
+        <h3>Bloed op die Grond</h3>
+        <div class="song-meta">Taal: Afrikaans · Tema: Plaasmoordsimboliek / Verlies / Herinnering</div>
+      </div>
+    </div>
+    <div class="tag-row">
+      <span class="tag">Plaasmoordsimboliek</span>
+      <span class="tag">Roubeklag</span>
+      <span class="tag">Herinnering</span>
+      <span class="tag">Geregtigheid</span>
+    </div>
+    <div class="song-body">
+      <div class="analysis-head">Kernboodskap</div>
+      <p>'n Roubeklag oor die verlies van mense op die grond van hul vaders. Die lied staan teen stilswye en vergeetagtigheid — dit benoem, dit onthou, dit bly trou. Dit vra nie wraak nie, maar herinnering en erkenning.</p>
+      <div class="analysis-head">Letterkundige Ontleding</div>
+      <p>Die sensoriese detailwerk (die honde blaf nie meer nie, die hek staan oop) teken 'n stilte wat skree. Die vrouefiguur wat in die deuropening staan, weet nie wat om te sê nie — 'n beeld van traumatiese stomheid wat universeel herkenbaar is. Die lied is gelaai met politieke konteks maar bly 'n menslike roubelewing eerder as 'n politieke pamflet. Dit is eerder getuienis as betoog.</p>
+      <div class="rating-bar">
+        <span class="rating-label">Letterkundige waarde</span>
+        <span class="stars">★★★★<span class="empty">★</span></span>
+      </div>
+    </div>
+  </article>
+
+  <!-- ── 24 ── -->
+  <article class="song-card" id="s24">
+    <div class="song-header">
+      <div class="song-num">24</div>
+      <div class="song-title-block">
+        <h3>Die Beeld in my Klip</h3>
+        <div class="song-meta">Taal: Afrikaans · Tema: Identiteit / Nageboorte van self / Beeldhoutwerk</div>
+      </div>
+    </div>
+    <div class="tag-row">
+      <span class="tag">Beeldhoutwerk</span>
+      <span class="tag">Identiteitsvorming</span>
+      <span class="tag">Verwagting</span>
+      <span class="tag">Selfontdekking</span>
+    </div>
+    <div class="song-body">
+      <div class="analysis-head">Kernboodskap</div>
+      <p>Die beeld was altyd in die klip — die beeldhouer kap net weg wat nie die ware self is nie. Du Toit gebruik Michelangelo se filosofie van beeldhoutwerk as metafoor vir selfontdekking: ons is nie gebreek nie — ons is net bedek. Identiteit is 'n wegruimingsproses, nie 'n bouwproses nie.</p>
+      <div class="analysis-head">Letterkundige Ontleding</div>
+      <p>Die Michelangelo-toespeling is universeel herkenbaar en intellektueel bevredigend. Die paradoks — "Ek slaan nie om te bou nie / Ek slaan om te verwyder" — herposisioneer lyding as 'n bevrydingsproses eerder as verwoesting. Die slotfrase "Nie perfek nie — maar vry / Vir die eerste keer — werklik ek" is 'n kragtige bevrydings-verklaring.</p>
+      <div class="rating-bar">
+        <span class="rating-label">Letterkundige waarde</span>
+        <span class="stars">★★★★★</span>
+      </div>
+    </div>
+  </article>
+
+  <!-- ── 25 ── -->
+  <article class="song-card" id="s25">
+    <div class="song-header">
+      <div class="song-num">25</div>
+      <div class="song-title-block">
+        <h3>Die Sleutelbos</h3>
+        <div class="song-meta">Taal: Afrikaans · Tema: Vaderskap / Erfenis / Oordrag</div>
+      </div>
+    </div>
+    <div class="tag-row">
+      <span class="tag">Vaderskap</span>
+      <span class="tag">Erfenis</span>
+      <span class="tag">Stilswyende liefde</span>
+      <span class="tag">Generasionele oordrag</span>
+    </div>
+    <div class="song-body">
+      <div class="analysis-head">Kernboodskap</div>
+      <p>'n Vader oorhandig sonder woorde 'n swaar, verroesde sleutelbos — die simboliese oordrag van verantwoordelikheid, geskiedenis en liefde. Elke sleutel het 'n verhaal. Die vader wat dit nie gesê het nie, het dit gedoen. En nou voeg die seun sy eie sleutels by — van vader na seun, van geslag tot geslag.</p>
+      <div class="analysis-head">Letterkundige Ontleding</div>
+      <p>Die sleutelbos as simbool van vaderlike liefde-sonder-woorde is delikaat en oorspronklik. Die een sleutel "wat ek nie weet wat dit oopsluit nie" is 'n besonder treffende detail — die vader het sy eie binnekamers gehad wat hy nooit oopgemaak het nie. Die generasionele kettingreaksie ("van vader na seun — van geslag tot geslag") is die ewige tema van Du Toit se vaderskapsliedere in miniatuur.</p>
+      <div class="rating-bar">
+        <span class="rating-label">Letterkundige waarde</span>
+        <span class="stars">★★★★★</span>
+      </div>
+    </div>
+  </article>
+
+  <!-- ── 26 ── -->
+  <article class="song-card" id="s26">
+    <div class="song-header">
+      <div class="song-num">26</div>
+      <div class="song-title-block">
+        <h3>Die Skerm wat Steel</h3>
+        <div class="song-meta">Taal: Afrikaans · Tema: Sosiale media / Meisies / Identiteit</div>
+      </div>
+    </div>
+    <div class="tag-row">
+      <span class="tag">Sosiale media</span>
+      <span class="tag">Meisiekind</span>
+      <span class="tag">Kuberboelie</span>
+      <span class="tag">Ouersorg</span>
+    </div>
+    <div class="song-body">
+      <div class="analysis-head">Kernboodskap</div>
+      <p>Die skerm steel 'n meisie se selfwaarde voor sy haarself gevind het. Likes leer haar wat sy "werd" is. Die internet onthou — al verander sy haar gesig. 'n Pleidooi aan ouers om vroeg genoeg te praat, en aan meisiekinders dat hulle meer is as die skerm se vertel.</p>
+      <div class="analysis-head">Letterkundige Ontleding</div>
+      <p>Een van Du Toit se mees sosiaal-relevant liedere. Die oop-erkenning van die ouer — "ons het dalk te lank gewag" — is seldsaam eerlik. Die gebruik van ouderdomme (tien, dertien) gee die lied konkrete temporaliteit. Die slotfrase "Voor die skerm dit gesteel het" is hartverskeurend in sy eenvoud.</p>
+      <div class="rating-bar">
+        <span class="rating-label">Letterkundige waarde</span>
+        <span class="stars">★★★★<span class="empty">★</span></span>
+      </div>
+    </div>
+  </article>
+
+  <!-- ── 27 ── -->
+  <article class="song-card" id="s27">
+    <div class="song-header">
+      <div class="song-num">27</div>
+      <div class="song-title-block">
+        <h3>Hoëveld Donderstorms</h3>
+        <div class="song-meta">Taal: Afrikaans · Tema: Emosionele vrystelling / Reinigingsreën / Hoëveld</div>
+      </div>
+    </div>
+    <div class="tag-row">
+      <span class="tag">Petrichor</span>
+      <span class="tag">Donderstorm</span>
+      <span class="tag">Emosionele vrystelling</span>
+      <span class="tag">Hoëveld</span>
+    </div>
+    <div class="song-body">
+      <div class="analysis-head">Kernboodskap</div>
+      <p>Die Hoëveld-donderstorm as metafoor vir emosionele bersting en reiniging. Soms moet iets bars voor dit beter kan word — die reën was wat vasgesteek het. Petrichor (die reuk van reën op droë grond) is die "beloning van die skoonwas". Die Hoëveld-mens weet: jy kan nie 'n storm keer nie, jy kan net besluit hoe jy daarin staan.</p>
+      <div class="analysis-head">Letterkundige Ontleding</div>
+      <p>Die gebruik van "petrichor" — 'n wetenskaplike term vir een van die mees diep geankerde sintuiglike herinneringe vir Suid-Afrikaners — is perfek gekies. Die koeie wat eerste weet (dierlike intuïsie as voorloper van menslike ervaring) is 'n treffende detail. Hierdie lied het 'n fisiese kwaliteit — jy voel die reën in die woorde.</p>
+      <div class="rating-bar">
+        <span class="rating-label">Letterkundige waarde</span>
+        <span class="stars">★★★★★</span>
+      </div>
+    </div>
+  </article>
+
+  <!-- ── 28 ── -->
+  <article class="song-card" id="s28">
+    <div class="song-header">
+      <div class="song-num">28</div>
+      <div class="song-title-block">
+        <h3>Die Gewig van Vlerke</h3>
+        <div class="song-meta">Taal: Afrikaans · Tema: Emigrasie / Heimwee / Liefde as gewig</div>
+      </div>
+    </div>
+    <div class="tag-row">
+      <span class="tag">Emigrasie</span>
+      <span class="tag">Heimwee</span>
+      <span class="tag">Paradoks van vlug</span>
+      <span class="tag">Familie</span>
+    </div>
+    <div class="song-body">
+      <div class="analysis-head">Kernboodskap</div>
+      <p>Vlieg vereis agterlaat. Die gewig van vlerke is nie die vlerke self nie — dit is wat jy moes loslaat om te vlieg. Dié gewig word nooit ligter nie. Maar dit is ook die bewys dat jy werklik liefgehad het. 'n Mens wat vlieg sonder gewig, het nooit werklik geleef nie.</p>
+      <div class="analysis-head">Letterkundige Ontleding</div>
+      <p>Die paradoks van vlug — vryheid vereis verlies — word hier met uitsonderlike emosionele eerlikheid verken. Die ouma en oupa-beelde is spesifiek en treffend. Die slotfrase — "Die gewig van vlerke… Dra ek nog… Oral waar ek vlieg… Dit bly wie ek is" — is 'n kragtige bevestiging van identiteit-deur-verlies.</p>
+      <div class="rating-bar">
+        <span class="rating-label">Letterkundige waarde</span>
+        <span class="stars">★★★★★</span>
+      </div>
+    </div>
+  </article>
+
+  <!-- ── 29 ── -->
+  <article class="song-card" id="s29">
+    <div class="song-header">
+      <div class="song-num">29</div>
+      <div class="song-title-block">
+        <h3>Die Vuurpyl</h3>
+        <div class="song-meta">Taal: Afrikaans · Tema: Ambisie / Risiko / Kortstondige heerlikheid</div>
+      </div>
+    </div>
+    <div class="tag-row">
+      <span class="tag">Ambisie</span>
+      <span class="tag">Risiko</span>
+      <span class="tag">Brand-en-verlig</span>
+      <span class="tag">Durf</span>
+    </div>
+    <div class="song-body">
+      <div class="analysis-head">Kernboodskap</div>
+      <p>'n Vuurpyl wat nooit afgevuur word, is net 'n stuk metaal. Die keuse om te brand, al weet jy nie waar jy land nie, is waardiger as 'n leeftyd van koue stilte. Al verbrand die vuurpyl, bly die lig lank na hy weg is.</p>
+      <div class="analysis-head">Letterkundige Ontleding</div>
+      <p>Die vuurpyl-metafoor is energiek en inspirasieryke. Die tegnologiese detail — "die eerste vuurpyl deel is afgegooi" (soos 'n multistadium-vuurpyl se boosterlose weggooi) — gee die metafoor 'n presiese wetenskaplike basis. Die paradoks "as ek verbrand / sal hulle my lig nog kan sien" verander dood in 'n vermenigvuldigde voortbestaan.</p>
+      <div class="rating-bar">
+        <span class="rating-label">Letterkundige waarde</span>
+        <span class="stars">★★★★<span class="empty">★</span></span>
+      </div>
+    </div>
+  </article>
+
+  <!-- ── 30 ── -->
+  <article class="song-card" id="s30">
+    <div class="song-header">
+      <div class="song-num">30</div>
+      <div class="song-title-block">
+        <h3>My Grondpad</h3>
+        <div class="song-meta">Taal: Afrikaans · Tema: Persoonlike pad / Oorspronklikheid / Volharding</div>
+      </div>
+    </div>
+    <div class="tag-row">
+      <span class="tag">Grondpad</span>
+      <span class="tag">Teerpad vs grondpad</span>
+      <span class="tag">Oorspronklikheid</span>
+      <span class="tag">Eie pad</span>
+    </div>
+    <div class="song-body">
+      <div class="analysis-head">Kernboodskap</div>
+      <p>Elke mens se pad is 'n grondpad — nie op enige kaart nie, nie deur enige app gevind nie. Die teerpad is breed en glad maar het nie jou naam geken nie. Die grondpad het gate en hobbels, maar dit is joune — dit was altyd joune.</p>
+      <div class="analysis-head">Letterkundige Ontleding</div>
+      <p>Die teerpad vs grondpad-onderskeid is eenvoudig maar potensieel diepgaande: teerpad = sosiaal goedgekeurde, veilige keuses; grondpad = jou eie, unieke, ongemaklike pad. Die stof wat agter jou neer val as "bewyse van waar jy was" is 'n treffende beeld van persoonlike geskiedskrywing. 'n Lied wat moed aanmoedig sonder om moeilikheid te ontken.</p>
+      <div class="rating-bar">
+        <span class="rating-label">Letterkundige waarde</span>
+        <span class="stars">★★★★<span class="empty">★</span></span>
+      </div>
+    </div>
+  </article>
+
+  <!-- ── 31 ── -->
+  <article class="song-card" id="s31">
+    <div class="song-header">
+      <div class="song-num">31</div>
+      <div class="song-title-block">
+        <h3>Horlosie Sonder Hande</h3>
+        <div class="song-meta">Taal: Afrikaans · Tema: Verlies / Rou / Tyd</div>
+      </div>
+    </div>
+    <div class="tag-row">
+      <span class="tag">Rou</span>
+      <span class="tag">Verlies</span>
+      <span class="tag">Gestolde tyd</span>
+      <span class="tag">Heling</span>
+    </div>
+    <div class="song-body">
+      <div class="analysis-head">Kernboodskap</div>
+      <p>Ná 'n verlies staan tyd stil — nie letterlik nie, maar innerlik. Die horlosie sonder hande is die simbool van gestolde tyd, van 'n wêreld wat aanbeweeg maar jou nie saam neem nie. Maar dalk is stilstaande tyd nie 'n straf nie — dalk is dit 'n geskenk om in die oomblik te bly.</p>
+      <div class="analysis-head">Letterkundige Ontleding</div>
+      <p>Die horlosie-sonder-hande is 'n onvergeetlike rou-simbool. Die vraag "Die horlosie sonder hande — maar vir wie?" is hartverskeurend in sy eenvoud. Die wending — "miskien is die hande nie weg nie, maar kan teruggeplaas word wanneer ons gereed is" — bied hoop sonder om rou te minimeer. 'n Besonder volwasse hanterende van 'n universele menslike ervaring.</p>
+      <div class="rating-bar">
+        <span class="rating-label">Letterkundige waarde</span>
+        <span class="stars">★★★★★</span>
+      </div>
+    </div>
+  </article>
+
+  <!-- ── 32 ── -->
+  <article class="song-card" id="s32">
+    <div class="song-header">
+      <div class="song-num">32</div>
+      <div class="song-title-block">
+        <h3>My Oneindige Sirkel</h3>
+        <div class="song-meta">Taal: Afrikaans · Tema: Patrone / Sielkundige groei / Spiraal vs sirkel</div>
+      </div>
+    </div>
+    <div class="tag-row">
+      <span class="tag">Herhalende patrone</span>
+      <span class="tag">Spiraal</span>
+      <span class="tag">Sielkundige groei</span>
+      <span class="tag">Geloof</span>
+    </div>
+    <div class="song-body">
+      <div class="analysis-head">Kernboodskap</div>
+      <p>Die vrees dat ons in sirkels loop — dieselfde keuses, dieselfde probleme, dieselfde verhoudingtipes. Maar die insig aan die einde is meesterlik: "Die sirkel was 'n spiraal wat draai na bo." Die herhalende pat is nie beweginglose sirkelloop nie — dit is 'n opwaartse spiraal wat elke keer op 'n hoër vlak terugkeer.</p>
+      <div class="analysis-head">Letterkundige Ontleding</div>
+      <p>Die spiraal-insig is een van Du Toit se filosofies mees treffende oomblikke. Die skuif van selfbeskrywing as "die Tekenaar" (meganies herhalend) na "iemand wat opkyk na die Vader" is 'n geestelike wending wat perspektief verander. Sielkundig akkuraat: herhalende patrone kom op hoër vlakke terug wanneer ons groei, selfs al lyk dit dieselfde.</p>
+      <div class="rating-bar">
+        <span class="rating-label">Letterkundige waarde</span>
+        <span class="stars">★★★★★</span>
+      </div>
+    </div>
+  </article>
+
+  <!-- ── 33 ── -->
+  <article class="song-card" id="s33">
+    <div class="song-header">
+      <div class="song-num">33</div>
+      <div class="song-title-block">
+        <h3>Sandkastele</h3>
+        <div class="song-meta">Taal: Afrikaans · Tema: Proses vs produk / Oupa-wysheid / Tydelikheid</div>
+      </div>
+    </div>
+    <div class="tag-row">
+      <span class="tag">Tydelikheid</span>
+      <span class="tag">Proses</span>
+      <span class="tag">Oupa-wysheid</span>
+      <span class="tag">Lewe as bou</span>
+    </div>
+    <div class="song-body">
+      <div class="analysis-head">Kernboodskap</div>
+      <p>Die sandkasteel is nie die punt nie — die bou is die punt. Die see se aankoms is nie 'n tragedie nie; dit is noodsaaklik, want sonder dit bou jy nooit weer nie. Die bou self, die skep self, bly vir altyd by jou — al verdwyn die produk.</p>
+      <div class="analysis-head">Letterkundige Ontleding</div>
+      <p>Du Toit bou 'n eenvoudige, kragtige filosofie van tydelikheid. Die oupa-wysheid is 'n terugkerende gesprekspartner in die katalogus — hier bied hy die diepste les: waarde lê nie in permanensie nie. Die strukturele sirkel (kind met kasteel → volwassene na kasteel → nou sy eie kind) gee die lied 'n generasionele diepte.</p>
+      <div class="rating-bar">
+        <span class="rating-label">Letterkundige waarde</span>
+        <span class="stars">★★★★★</span>
+      </div>
+    </div>
+  </article>
+
+  <!-- ── 34 ── -->
+  <article class="song-card" id="s34">
+    <div class="song-header">
+      <div class="song-num">34</div>
+      <div class="song-title-block">
+        <h3>The Last Before My First</h3>
+        <div class="song-meta">Taal: Engels · Tema: Vertrek / Nuwe begin / Afskeid</div>
+      </div>
+    </div>
+    <div class="tag-row">
+      <span class="tag">Afskeid</span>
+      <span class="tag">Nuwe begin</span>
+      <span class="tag">Plaas-vertrek</span>
+      <span class="tag">Engels</span>
+    </div>
+    <div class="song-body">
+      <div class="analysis-head">Kernboodskap</div>
+      <p>Die laaste bekende pad voor die eerste onbekende een. Die eikenhouttafel, die stof agter die quad, die ou palmboom — dit is alles "laaste" oomblikke. Maar elke laaste oomblik maak ruimte vir 'n eerste. Die troos: 'n stuk van jou sal altyd in die plekke wat jy liefgehad het, bly.</p>
+      <div class="analysis-head">Letterkundige Ontleding</div>
+      <p>Hierdie is 'n teks van uitsonderlike liriese helderheid in Engels. Die reël "You can't leave footprints in new ground / If you never lift your feet" is 'n byna spreukagtige formulering van 'n moeilike waarheid. Die sorg waarmee Du Toit die laaste farm-oomblikke teken ("die windmeul draai — soos altyd") bring dit tot by hartseer.</p>
+      <div class="rating-bar">
+        <span class="rating-label">Letterkundige waarde</span>
+        <span class="stars">★★★★★</span>
+      </div>
+    </div>
+  </article>
+
+  <!-- ── 35 ── -->
+  <article class="song-card" id="s35">
+    <div class="song-header">
+      <div class="song-num">35</div>
+      <div class="song-title-block">
+        <h3>Sewe Sluiers</h3>
+        <div class="song-meta">Taal: Afrikaans · Tema: Verlies van self / Misbruik / Fragmentasie</div>
+      </div>
+    </div>
+    <div class="tag-row">
+      <span class="tag">Sewe sluiers van Salomé</span>
+      <span class="tag">Verlies van identiteit</span>
+      <span class="tag">Traumatiese fragmentasie</span>
+      <span class="tag">Donker teks</span>
+    </div>
+    <div class="song-body">
+      <div class="analysis-head">Kernboodskap</div>
+      <p>'n Vrou verloor sluier vir sluier, dans vir dans, stukkie van haarself. Elke "dans" kos 'n stuk identiteit. Teen die sewende sluier is sy nie meer daar nie — die dans gaan aan sonder haar. 'n Donker, poëties kragtige uitverkenning van trauma en self-verlies.</p>
+      <div class="analysis-head">Letterkundige Ontleding</div>
+      <p>Hierdie is Du Toit se duisterste, mees poëties-gesofistikeerde teks. Die allusie op die dans van Salomé (sewe sluiers) gee die teks diepte van kulturele herinnering. Die progressiewe ontmensliking — "teen die vyfde het die naam opgehou saak maak" — is psigologies akkuraat en byna ondraaglik om te lees. Die kind wat in die veld hardloop en blomme pluk was "die eerste wat gegaan het" — 'n hartverskeurende kristallisering van kinderlike onskuld wat verdwyn. Letterkundig 'n hoogtepunt.</p>
+      <div class="rating-bar">
+        <span class="rating-label">Letterkundige waarde</span>
+        <span class="stars">★★★★★</span>
+      </div>
+    </div>
+  </article>
+
+  <!-- ── 36 ── -->
+  <article class="song-card" id="s36">
+    <div class="song-header">
+      <div class="song-num">36</div>
+      <div class="song-title-block">
+        <h3>Die Gulsige Hond</h3>
+        <div class="song-meta">Taal: Afrikaans · Tema: Sistemiese druk / Werk / Prioriteite</div>
+      </div>
+    </div>
+    <div class="tag-row">
+      <span class="tag">Werk-lewe balans</span>
+      <span class="tag">Sisteem-kritiek</span>
+      <span class="tag">Prioriteite</span>
+      <span class="tag">Sterk beelding</span>
+    </div>
+    <div class="song-body">
+      <div class="analysis-head">Kernboodskap</div>
+      <p>'n Sisteem wat jou tyd vreet soos 'n gulsige hond — nooit versadig nie, altyd more, nooit genoeg. Die spreker bly hom tog elke dag voer, en weet dit is verkeerd, maar staan nietemin môre weer op en bring weer 'n stuk. Die slotreëls — "Prioriteite verkeerd!" — is 'n eerlike selfaanklag.</p>
+      <div class="analysis-head">Letterkundige Ontleding</div>
+      <p>Die hond-metafoor is visueel kragtig en effektief. Die keuse om die "gulsige hond" nie te benoem nie (is dit die werkgewer? die finansiële stelsel? ambisie self?) gee dit universele toepassing. Die slot — "En ek laat hom toe om te vreet / Stuk op stuk — dag na dag / Tot ek vergeet wie ek is" — is 'n eerlike, pynlike erkenning van medewerking in jou eie uitputting.</p>
+      <div class="rating-bar">
+        <span class="rating-label">Letterkundige waarde</span>
+        <span class="stars">★★★★<span class="empty">★</span></span>
+      </div>
+    </div>
+  </article>
+
+  <!-- ── 37 ── -->
+  <article class="song-card" id="s37">
+    <div class="song-header">
+      <div class="song-num">37</div>
+      <div class="song-title-block">
+        <h3>Rooiwyn en Spyt</h3>
+        <div class="song-meta">Taal: Afrikaans · Tema: Ouderdom / Alleenheid / Eerlikheid</div>
+      </div>
+    </div>
+    <div class="tag-row">
+      <span class="tag">Alleenheid</span>
+      <span class="tag">Refleksie op 'n lewe</span>
+      <span class="tag">Eerlikheid</span>
+      <span class="tag">Veroudering</span>
+    </div>
+    <div class="song-body">
+      <div class="analysis-head">Kernboodskap</div>
+      <p>'n Man sit alleen met sy wyn en sy spyt. Hy het gewen — die werk, die geld — maar die mense is weg. Tog is daar 'n draai: "Maar weet jy wat die snaakste is / Ek sou dit nie verander nie." Nie as triomf nie, maar as aanvaarding: hierdie keuses het hom hier gebring, en hier is hy.</p>
+      <div class="analysis-head">Letterkundige Ontleding</div>
+      <p>Die paradoks in die slot — aanvaarding van spytvolle keuses sonder selfbejammering — is emosioneel volwasse en onverwags. Die wyn en spyt as "ou gesellige paar" personifiseer alleenheid met 'n tikkie galgehumor wat die lied van suiwer tragedie red. 'n Mens wat alleen drink en eerlik is met homself — dit is 'n ikonies-menslike beeld.</p>
+      <div class="rating-bar">
+        <span class="rating-label">Letterkundige waarde</span>
+        <span class="stars">★★★★<span class="empty">★</span></span>
+      </div>
+    </div>
+  </article>
+
+  <!-- ── 38 ── -->
+  <article class="song-card" id="s38">
+    <div class="song-header">
+      <div class="song-num">38</div>
+      <div class="song-title-block">
+        <h3>Die Laaste Afrikaners</h3>
+        <div class="song-meta">Taal: Afrikaans · Tema: Taalidentiteit / Kulturele voortbestaan / Skaamte vs trots</div>
+      </div>
+    </div>
+    <div class="tag-row">
+      <span class="tag">Taalidentiteit</span>
+      <span class="tag">Afrikaans</span>
+      <span class="tag">Kulturele voortbestaan</span>
+      <span class="tag">Politieke gelaaidheid</span>
+    </div>
+    <div class="song-body">
+      <div class="analysis-head">Kernboodskap</div>
+      <p>Tale sterf in skaamte, stilte en vergeet. Afrikaans is die taal van drome en gebede. Solank mense dit praat en sing, leef dit. Die lied is nie 'n politieke manifes nie, maar 'n liefdeslied aan 'n taal — "ons veg vir 'n taal — nie uit haat nie — maar uit liefde."</p>
+      <div class="analysis-head">Letterkundige Ontleding</div>
+      <p>Die sterkste reël: "Tale sterf in skaamte — in stilte — in vergeet." Dit identifiseer die werklike vyand nie as politieke antagoniste nie, maar as internaliseerde skaamte. Die teenwerp "of die eerste van baie" (laaste of eerste?) is 'n geslaagde retoriese spanning. Die lied tree versigtig maar vasberade op 'n politiek gelade terrein.</p>
+      <div class="rating-bar">
+        <span class="rating-label">Letterkundige waarde</span>
+        <span class="stars">★★★★<span class="empty">★</span></span>
+      </div>
+    </div>
+  </article>
+
+  <!-- ── 39 ── -->
+  <article class="song-card" id="s39">
+    <div class="song-header">
+      <div class="song-num">39</div>
+      <div class="song-title-block">
+        <h3>Tyd se Dief</h3>
+        <div class="song-meta">Taal: Afrikaans · Tema: Tyd / Dood / Bewuste keuse</div>
+      </div>
+    </div>
+    <div class="tag-row">
+      <span class="tag">Tyd as dief</span>
+      <span class="tag">Memento mori</span>
+      <span class="tag">Bewuste lewe</span>
+      <span class="tag">Personifikasie</span>
+    </div>
+    <div class="song-body">
+      <div class="analysis-head">Kernboodskap</div>
+      <p>Tyd steel nie geld nie — hy steel oomblikke, jeug, mense. Die enigste dief wat almal ken en niemand stop nie. Die enigste antwoord is bewuste, teenwoordige keuse — elke oomblik wat hy nog nie gevat het nie, is 'n geskenk.</p>
+      <div class="analysis-head">Letterkundige Ontleding</div>
+      <p>Die "tyd as dief"-troop word dikwels gebruik, maar Du Toit gee dit varsheid deur spesifisiteit: "jou kinders se eerste woorde / die laaste keer wat jou geliefde gelag het." Hierdie lys is meer treffend as enige abstrakte bewering. Die slotfrase "Tik… Tok… So loop hy uit" is gevaarlik effektief in sy tydsbewuste beelding.</p>
+      <div class="rating-bar">
+        <span class="rating-label">Letterkundige waarde</span>
+        <span class="stars">★★★★<span class="empty">★</span></span>
+      </div>
+    </div>
+  </article>
+
+  <!-- ── 40 ── -->
+  <article class="song-card" id="s40">
+    <div class="song-header">
+      <div class="song-num">40</div>
+      <div class="song-title-block">
+        <h3>Die Laaste Verjaarsdag Kers</h3>
+        <div class="song-meta">Taal: Afrikaans · Tema: Hoop / Swaar tye / Volharding</div>
+      </div>
+    </div>
+    <div class="tag-row">
+      <span class="tag">Simboolpoesie</span>
+      <span class="tag">Hoop</span>
+      <span class="tag">Volharding</span>
+      <span class="tag">Donker tye</span>
+    </div>
+    <div class="song-body">
+      <div class="analysis-head">Kernboodskap</div>
+      <p>'n Enkele kers wat flikker in die donker. Die spreker hou dit teen die wind — asem ingehou, bewend. Die vraag — "Bly brand, of laat die donker in?" — word herhaaldelik gevra, sonder 'n finale antwoord. Die kers flikker nog, en dit is genoeg.</p>
+      <div class="analysis-head">Letterkundige Ontleding</div>
+      <p>Die lied se krag lê in sy onsekere oop einde — "Ons sal sien… ons sal sien." Dit is eerlik: Du Toit belowe nie 'n happy ending nie. Die kers kan uitgaan. Die donker kan wen. Maar die feit dat dit nóg flikker is die lied self. Die herhaaldelike "Bly brand" het die kwaliteit van 'n gebed wat nie weet of dit gehoor word nie.</p>
+      <div class="rating-bar">
+        <span class="rating-label">Letterkundige waarde</span>
+        <span class="stars">★★★★★</span>
+      </div>
+    </div>
+  </article>
+
+  <!-- ── 41 ── -->
+  <article class="song-card" id="s41">
+    <div class="song-header">
+      <div class="song-num">41</div>
+      <div class="song-title-block">
+        <h3>Analoog</h3>
+        <div class="song-meta">Taal: Afrikaans · Tema: Tegnologie / Nostalgie / Menslike kontak</div>
+      </div>
+    </div>
+    <div class="tag-row">
+      <span class="tag">Digitale verstik</span>
+      <span class="tag">Nostalgie</span>
+      <span class="tag">Analoog</span>
+      <span class="tag">Menslike kontak</span>
+    </div>
+    <div class="song-body">
+      <div class="analysis-head">Kernboodskap</div>
+      <p>Analoog is nie net 'n tegnologie nie — dit is 'n manier van wees. Die "kras krap" van 'n langspeel plaat, ink wat smeer, oë wat kyk eerder as skerms. "Ons praat meer — maar sê minder." Die pleidooi vir stadiger, minder, meer mens.</p>
+      <div class="analysis-head">Letterkundige Ontleding</div>
+      <p>Die "kras krap" as sensuele herinnering aan analoog klank is besonder tref — dit is nie 'n fout nie, dit is die bewys van werklikheid. Die insig "In elke kras krap / was daar waarheid / In elke fout / was daar lewe" herposisioneer onvolmaaktheid as egtheid. Kultureel resonerendend vir enige generasie wat die skakelaar van analoog na digitaal beleef het.</p>
+      <div class="rating-bar">
+        <span class="rating-label">Letterkundige waarde</span>
+        <span class="stars">★★★★★</span>
+      </div>
+    </div>
+  </article>
+
+  <!-- ── 42 ── -->
+  <article class="song-card" id="s42">
+    <div class="song-header">
+      <div class="song-num">42</div>
+      <div class="song-title-block">
+        <h3>Braaivleis en Bier</h3>
+        <div class="song-meta">Taal: Afrikaans · Tema: Kultuurvierend / Gemeenskap / Erfenis</div>
+      </div>
+    </div>
+    <div class="tag-row">
+      <span class="tag">Braai-kultuur</span>
+      <span class="tag">Afrikaner-identiteit</span>
+      <span class="tag">Gemeenskap</span>
+      <span class="tag">Fees</span>
+    </div>
+    <div class="song-body">
+      <div class="analysis-head">Kernboodskap</div>
+      <p>'n Uitbundige viering van die braai-kultuur as draer van Afrikaner-identiteit en menslike verbondenheid. Nie arrogant nie — innig. Die vuur is nie net kos nie, dit is binding, erfenis, gemeenskap. "Hierdie vuur — hierdie mense — hierdie hart / Dit bly ons s'n — vir altyd."</p>
+      <div class="analysis-head">Letterkundige Ontleding</div>
+      <p>Hierdie is Du Toit op sy mees toeganklik en uitnodigend. Die braaimeester wat "niks anders gedoen het sy hele lewe nie" en "niemand hom mag adviseer nie" is 'n herkenbare, warmhartige tipe. Die slot — "Om die vuur — om die tafel — om mekaar / Dit is alles wat 'n mens ooit nodig het" — is eenvoudig en fundamenteel waar.</p>
+      <div class="rating-bar">
+        <span class="rating-label">Letterkundige waarde</span>
+        <span class="stars">★★★★<span class="empty">★</span></span>
+      </div>
+    </div>
+  </article>
+
+  <!-- ── 43 ── -->
+  <article class="song-card" id="s43">
+    <div class="song-header">
+      <div class="song-num">43</div>
+      <div class="song-title-block">
+        <h3>Die Depressie Monster</h3>
+        <div class="song-meta">Taal: Afrikaans · Tema: Depressie / Geestesgesondheid / Hoop</div>
+      </div>
+    </div>
+    <div class="tag-row">
+      <span class="tag">Depressie</span>
+      <span class="tag">Geestesgesondheid</span>
+      <span class="tag">Stigma</span>
+      <span class="tag">Hoop en stryd</span>
+    </div>
+    <div class="song-body">
+      <div class="analysis-head">Kernboodskap</div>
+      <p>Die monster van depressie praat — en die spreker weier. Elke dag is 'n geveg wat niemand sien nie. Die lied weier om te kapituleer: "ek kies vandag — om te bly." Die boodskap aan die luisteraar: "Ek is hier / Ek sien jou / Jy is nie alleen nie."</p>
+      <div class="analysis-head">Letterkundige Ontleding</div>
+      <p>Dit is 'n moed-vergende lied om te skryf. Du Toit gee die Monster 'n stem — sy leuens word letterlik aangehaal — en weerlê hulle dan. Die "duiwel in my kop lieg vir my" formulering is teologies en sielkundig terselfdertyd akkuraat. Die keuse om die lied te laat wissel tussen eerstepersoonsstryd en tweederpersoonsaanraak ("Ek is hier / Ek sien jou") is 'n geslaagde strukturele keuse.</p>
+      <div class="rating-bar">
+        <span class="rating-label">Letterkundige waarde</span>
+        <span class="stars">★★★★★</span>
+      </div>
+    </div>
+  </article>
+
+  <!-- ── 44 ── -->
+  <article class="song-card" id="s44">
+    <div class="song-header">
+      <div class="song-num">44</div>
+      <div class="song-title-block">
+        <h3>Vernietig My</h3>
+        <div class="song-meta">Taal: Afrikaans · Tema: Destruktiewe liefde / Donker passie / Paradoks</div>
+      </div>
+    </div>
+    <div class="tag-row">
+      <span class="tag">Destruktiewe liefde</span>
+      <span class="tag">Passievolle paradoks</span>
+      <span class="tag">Donker romantiese troop</span>
+    </div>
+    <div class="song-body">
+      <div class="analysis-head">Kernboodskap</div>
+      <p>Die paradoks van 'n verhouding wat vernietig en terselfdertyd die enigste lewensruimte bied. "Sonder jou — is ek al klaar dood" — die duisternis as die enigste plek waar asem haal moontlik voel. 'n Donker, passievolle uitverkenning van selfvernietigende aantrekking.</p>
+      <div class="analysis-head">Letterkundige Ontleding</div>
+      <p>Du Toit betree hier 'n uitsonderlike terrein vir hom — donker romantiese passie sonder morele resolutie. Die lied weier om te herskryf of te verlig; dit sit in die duisternis. "Ons brand soos sterre wat val / Pragtig — en vir 'n oomblik — ewig" is 'n fraaie paradoks: ewigheid in 'n oomblik van verbruik. Letterkundig gesofistikeerd; 'n welkome spanning in die katalogus.</p>
+      <div class="rating-bar">
+        <span class="rating-label">Letterkundige waarde</span>
+        <span class="stars">★★★★<span class="empty">★</span></span>
+      </div>
+    </div>
+  </article>
+
+  <!-- ── 45 ── -->
+  <article class="song-card" id="s45">
+    <div class="song-header">
+      <div class="song-num">45</div>
+      <div class="song-title-block">
+        <h3>Hierdie Grond</h3>
+        <div class="song-meta">Taal: Afrikaans · Tema: Emigrasie / Patriotisme / Pynlike liefde</div>
+      </div>
+    </div>
+    <div class="tag-row">
+      <span class="tag">Emigrasie</span>
+      <span class="tag">Patriotisme</span>
+      <span class="tag">Pynlike tuisliefde</span>
+      <span class="tag">Suid-Afrika</span>
+    </div>
+    <div class="song-body">
+      <div class="analysis-head">Kernboodskap</div>
+      <p>Hoe hou jy van iets wat jou soms breek? Hierdie grond is in jou bloed — jy kan haar haat, jy kan haar liefhê, maar jy kan haar nooit vergeet nie. Emigrasie is nie verraad nie — dit is 'n vader wat vir sy kinders bou. Maar die grond loop saam, diep in jou.</p>
+      <div class="analysis-head">Letterkundige Ontleding</div>
+      <p>Miskien die emo-filosofies rykste behandeling van emigrasie in die katalogus. Die sleutelinsig — "Hierdie grond — is Ek" — is 'n identiteitsverklaring wat grond en self saamsmelt. Die paradoks van liefhê-en-haat word eerlik vasgehou sonder resolusie. "Waar tuis ookal mag wees" is 'n oop, eerlike slotfrase.</p>
+      <div class="rating-bar">
+        <span class="rating-label">Letterkundige waarde</span>
+        <span class="stars">★★★★★</span>
+      </div>
+    </div>
+  </article>
+
+  <!-- ── 46+ ── -->
+  <article class="song-card" id="s46">
+    <div class="song-header">
+      <div class="song-num">46+</div>
+      <div class="song-title-block">
+        <h3>Verdere Liedere — Kompakte Ontledings</h3>
+        <div class="song-meta">Alle oorblywende liedere in die katalogus</div>
+      </div>
+    </div>
+    <div class="song-body">
+
+      <div class="analysis-head">Blou Neon</div>
+      <p>Soek 'n verlore mens in 'n neonverlichte stad. Stedelike atmosfeer met 'n hartseerlike soeke-narratief. Die neonlig as geloofsimbool dat die persoon nog gevind kan word. Treffend en filmies. ★★★★</p>
+
+      <div class="analysis-head">One Last Harvest</div>
+      <p>Engelstalige roubeklag oor 'n boer wat sy plaas verloor aan die bank. "He didn't fail the land / The land didn't fail him / The world just stopped caring / About the men who feed it." Diep menslike trajikheid met 'n krachtige sosio-ekonomiese onderlaag. ★★★★★</p>
+
+      <div class="analysis-head">My Ou Vriend</div>
+      <p>Afskeidslied aan 'n diep vriend wat emigreer. "Ware vriendskap ken nie afstand nie." Warm en persoonlik, sonder sentiment te wees. Die "tot weersiens" vs "totsiens" onderskeid is treffend. ★★★★</p>
+
+      <div class="analysis-head">Vuur teen Vuur</div>
+      <p>Twee brandende persoonlikhede wat mekaar vernietig — maar nie kan los nie. "Ons slagveld lê vol geraamtes." Passievolle, byna Shakespeariaanse dinamika van gelyke maar botsende kragte. ★★★★</p>
+
+      <div class="analysis-head">Oorgeërf</div>
+      <p>Een van die mees emosioneel eerlike vaderskap-liedere: die oordrag van onverwerkte pyn van vader na seun, van man na man, en die bewuste keuse om dit by jouself te stop. "By my stop dit… By my begin dit oor…" is 'n kragtige intergenerasionele belofte. ★★★★★</p>
+
+      <div class="analysis-head">Onder die Oppervlak</div>
+      <p>Mans dra maskers. Agter die glimlag van die man wat "alles kan", skree iets sag. 'n Dringend nodige pleidooi vir manlike emosionele eerlikheid. "Hoor my — iemand — sien my raak" is 'n noodkreet wat in die katalogus uniek is vir sy kwesbaarheid. ★★★★★</p>
+
+      <div class="analysis-head">Aardse Besittings</div>
+      <p>Die waarde van wat ons self bou met ons hande — houtvloere, mure, heinings, koelkamers. "Hemelse herinneringe / Ons was hier." Die materiële as draer van betekenisvolle bestaan. ★★★★</p>
+
+      <div class="analysis-head">Vandag is jy my Dogter</div>
+      <p>Aannemingslied — 'n kind wat van kleins af in die hart was, word vandag op papier beseël. "Geen dokument het dit gemaak nie / Maar vandag het dit beseël." Eenvoudig en hartseer-mooi. ★★★★★</p>
+
+      <div class="analysis-head">My Strokies</div>
+      <p>'n Man lê sy "betaalbewyse" op die tafel — nie erfenis nie, maar bloed, sweet en wilskrag. Arizona en die Stars and Stripes wag. 'n Emigrasie-triomflied met selfvertroue en hoop. ★★★★</p>
+
+      <div class="analysis-head">Die Lewensboek</div>
+      <p>Twee mense se lewens as 'n boek wat blad vir blad geskryf word — nie altyd mooi nie, maar altyd eg. Die "ink van swoeg en sweet" is 'n treffende beeld. ★★★★</p>
+
+      <div class="analysis-head">Meel op die Vloer</div>
+      <p>Uitbundige fees-lied — die ou jaar uit dans, die nuwe in. Storierige, feesvreudelike teks wat die eenvoud van saamwees vier. ★★★</p>
+
+      <div class="analysis-head">Wait for Us There</div>
+      <p>Engelstalige vaderlied aan 'n emigrerende seun. "Carry the flame you bear / through every fight, through every fall / Just wait for us there." Roerendende belofte van ouers dat hulle sal volg. ★★★★★</p>
+
+      <div class="analysis-head">Uit die As</div>
+      <p>Veldbrand en wedergeboorte. Nuwe groen spruite op verbrandde grond. Natuur as metafoor vir persoonlike herstel: "Miskien is dit hoe lewe werk / wanneer alles breek en brand." ★★★★</p>
+
+      <div class="analysis-head">Hemel oor die Veld</div>
+      <p>Dankbaarheids- en geestelike lied. Natuur as godsdienstige ervaring — wind, arend, reën, berge. "Onder die hemel oor die veld / weet ek weer hoekom ek leef." ★★★★</p>
+
+      <div class="analysis-head">Berge wat Stof Geword het</div>
+      <p>Gefaalde liefde as 'n berg wat slyp tot stof — maar wat jou sterker laat. "Elke wond het my geleer / Ek staan vandag sterker as ooit." ★★★★</p>
+
+      <div class="analysis-head">Die Geskeurde Portret</div>
+      <p>Dood van 'n kind — 'n portret wat nooit voltooi sal word nie. "Jy was my môre / jy was my lig." Onuithoudelik in sy pyn. Du Toit se mees hartverskeurende lied. ★★★★★</p>
+
+      <div class="analysis-head">My Wild Child (Shana)</div>
+      <p>Liefdeslied aan 'n energieke, "te veel" kind. "They say you're too much / but they just don't see / the magic that lives inside your wild heartbeat." 'n Vaderlike bevestiging van oorspronklikheid. ★★★★</p>
+
+      <div class="analysis-head">My Persiese Mat</div>
+      <p>Werf-vader-lied. 'n Vader wat ver werk weef soos 'n Persiese mat — draad vir draad, tyd vir tyd. "Hierdie lewe hierdie mooi is die Persiese mat wat jy vir ons geweef het." ★★★★★</p>
+
+      <div class="analysis-head">Dollars vir my Kinders</div>
+      <p>Migrant-vader se offer. Elke dollar dra die kinders se naam. "Tien maande lank ver van die huis." Eerlik en kragtig sonder sentimentaliteit. ★★★★</p>
+
+      <div class="analysis-head">Sensing, Feeling, Falling</div>
+      <p>Verlies van liefde in Engels — breking, skerwe, pyn wat teen 'n asimptoot rek en nooit eindig nie. "Pain stretching toward infinity / always close but never ending." Wiskundig-presiese beskrywing van rou. ★★★★★</p>
+
+      <div class="analysis-head">My Hart met Twee Voete</div>
+      <p>"'n Man se dogter is sy hart met twee klein voete wat die wêreld instap." Teer, eenvoudig, volkome waar. ★★★★</p>
+
+      <div class="analysis-head">Die Tas by die Deur</div>
+      <p>Seun wag by die venster vir 'n pa wat nooit kom nie. Die stiefvader wat sê "Kom sit, seun… kom eet" is die pa wat werklik gebly het. "Dis die man wat by jou bly." ★★★★★</p>
+
+      <div class="analysis-head">Die Leë Stoel by die Tafel</div>
+      <p>Rou na 'n familielid se dood. Die stoel is leeg, maar die herinnering van hande wat brood gesny het, bly. "Eendag sal ons hoor hoe jy sag vir ons sê / Kom sit… die koffie raak koud." ★★★★★</p>
+
+      <div class="analysis-head">Grys Spook van die Bosveld</div>
+      <p>Jagstorie — koedoe in die Bosveld. Presies, sensories ryk, en 'n treffende parallel tussen jag en lewenskeuses. "Die Bosveld gee maar die Bosveld besluit." ★★★★</p>
+
+      <div class="analysis-head">Water is Dikker as Bloed</div>
+      <p>Vriendskap wat dieper bind as bloed. "Nie deur bloed alleen verbind nie — maar deur die paaie wat ons bou." Belyningsvers oor werklike broederlikheid. ★★★★</p>
+
+      <div class="analysis-head">Die Wind van Tye</div>
+      <p>Emigrasie-lied van 'n boer-ingenieur wat die Suidpunt verlaat. "Emigrasie is nie verraad nie — dis 'n vader wat vir sy kinders bou." Trots, pynlik, en deurleef. ★★★★★</p>
+
+    </div>
+  </article>
+
+</section>
+
+<!-- ═══════════════════════════ EXECUTIVE SUMMARY ═══════════════════════════ -->
+<section class="exec-summary" id="exec">
+
+  <div class="section-banner">
+    <div class="eyebrow">Afdeling Drie</div>
+    <h2>Algemene <em>Executive Summary</em></h2>
+  </div>
+
+  <div style="height:2rem"></div>
+
+  <h3>Wie is AJ du Toit as kunstenaar?</h3>
+
+  <p>AJ du Toit is 'n liedskrywer van uitsonderlike intellektuele ambidering en emosionele eerlikheid. Hy skryf in die tradisie van die groot vertellers — mense wat geloof en wetenskap, natuur en menslikheid, trots en kwesbaarbeid in een asem kan besit — maar met 'n stem wat onmiskenbaar eie en uniek Suid-Afrikaans is.</p>
+
+  <p>Sy katalogus van 46 liedere verteenwoordig 'n merkwaardige literêre prestasie: 'n koherente oeuvre met herkenbare tematise asse, 'n konsekwente estetiese identiteit, en 'n emosionele diepte wat die toevallige luisteraar telkens verras en die getroue luisteraar telkens beloon.</p>
+
+  <h3>Die Wetenskaplike Digter</h3>
+
+  <p>Du Toit se mees onderskeidende kenmerk is sy gebruik van wetenskaplike konsepte as primêre metaforiese taal. Hy verduidelik die menslike siel deur vloeimeganika (Turbulensie), persepsie deur akoestika (Doppler-Effek), liefde deur elektromagnetisme (Magneties, Sout van die Aarde), groei deur termodinamika (Latente Hitte, My Stookketel), en verbintenis deur golffisika (Resonansie, Die Bosveld se Polsslag). Hierdie is nie opgesmukte metafore nie — dit is presies gehandhaafde konseptuele raamwerke wat deur elke lied konsekwent uitgedra word.</p>
+
+  <p>Die gevolg is 'n taal vir menslike ervaring wat vars, intellektueel bevredigend, en emosioneel tref terselfdertyd is. Wanneer Du Toit sê "latente hitte is onsigbaar maar werklik," spreek hy die termodinamika sowel as die siel.</p>
+
+  <h3>Die Tematise Landkaart</h3>
+
+  <p><strong>Vaderskap</strong> is die sentrale menslike verhouding in die katalogus — biologies, aanneming, stiefvader, migrant-vader, afwesige vader, oorledene vader. Hierdie obsessie met vaderskap onthul 'n man wat hierdie verhouding diep verwerk het en dit steeds verwerk.</p>
+
+  <p><strong>Tyd en verganklikheid</strong> is die sentrale filosofiese asse — elke oomblik tel, elke dag is minder, die dief loop sonder ophou. Du Toit se mees diepgaande insig is dat verganklikheid 'n motivasie is, nie 'n wanhoop nie.</p>
+
+  <p><strong>Suid-Afrikaanse grond en identiteit</strong> bly onafskeidbaar van Du Toit se stem, selfs as die liedere in Utah, Arizona of Salt Lake City afspeel. Die grond loop saam. Dit is nie nostalgie nie — dit is identiteit.</p>
+
+  <p><strong>Geestelikheid sonder dogmatisme</strong> — die Vader word aangespreek, geloof word beoefen, maar Du Toit moraliseer nie en predik nie. Hy bid, hy twyfel, hy staan op. Dit is 'n geloofspraktyk eerder as 'n geloofsbeginsels.</p>
+
+  <h3>Sterkste Liedere (Top 10 Aanbevelings)</h3>
+
+  <p>Op grond van letterkundige waarde, konseptuele originaliteit en emosionele krag, staan die volgende tien liedere as die hoogtepunte van die katalogus uit: <em>Turbulensie</em>, <em>Doppler-Effek</em>, <em>Sout van die Aarde</em>, <em>Latente Hitte</em>, <em>Magneties</em>, <em>My Stookketel</em>, <em>Die Gewig van Vlerke</em>, <em>Sewe Sluiers</em>, <em>Drome en Herinneringe</em>, en <em>Vir Ewig Stil</em>. Elk van hierdie liedere kan sonder verdere konteks as 'n selfstandige letterkundige teks staan.</p>
+
+  <h3>Nalatenskap en Relevansie</h3>
+
+  <p>Du Toit se liedere raak nie vinnig verouder nie — omdat hulle nie op tydgebonde verwyings gebou is nie, maar op menslike universele ervarings wat in tydlose wetenskaplike konsepte geankerd is. 'n Lied soos Latente Hitte sal oor dekades dieselfde trooswaarde behou as op die dag dat dit geskryf is. Dit is 'n toets van werklike kwaliteit.</p>
+
+  <p>As Afrikaanse musiek 'n "groot katalogus" ken — liedere wat generasies oorleef nie weens aanvanklike gewildheid nie, maar weens diepte — dan het AJ du Toit met hierdie liggaam van werk 'n legitieme aanspraak op 'n plek daarin.</p>
+
+  <div class="verdict-box">
+    <div class="eyebrow">Finale Beoordeling</div>
+    <h3>"'n Stem wat Lank sal Resoneer"</h3>
+    <p>AJ du Toit skryf liedere wat dink. Dit is sy grootste onderskeidende kenmerk, en dit is wat hom posisioneer as een van die mees intellektueel ernstige Afrikaanse liedskrywers van sy generasie. Sy katalogus is die werk van 'n man wat werklik deur die fisiese wêreld en die geestelike een beweeg en dit in dieselfde asem besing.</p>
+    <p>Hierdie is 'n kunstenaar wat sy oeuvre verstaan as 'n gesamentlike projek — een waar elke nuwe lied die vorige verryk, en die geheel groter is as die som van die dele. Die 46 liedere hier ondersoek is nie 'n willekeurige versameling nie — dit is 'n man se lewenswerk-in-aksie, 'n volgehoue gesprek met die self, die gemeenskap, die wetenskap en God.</p>
+    <p>Dit verdien gelees, geluister en onthoud te word.</p>
+  </div>
+
+</section>
+
+</div><!-- /.page -->
+</main>
+
+<footer>
+  <span>AJ du Toit — Volledige Letterkundige Resensie</span> &nbsp;·&nbsp; 46 liedere &nbsp;·&nbsp; Saamgestel Junie 2026
+</footer>
+
+</body>
+</html>
